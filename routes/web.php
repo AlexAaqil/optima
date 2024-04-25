@@ -1,11 +1,14 @@
 <?php
 
-use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\GeneralPagesController;
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', [GeneralPagesController::class, 'home'])->name('home');
+Route::get('/about', [GeneralPagesController::class, 'about'])->name('about');
+Route::get('/services', [GeneralPagesController::class, 'services'])->name('services');
+Route::get('/contact', [GeneralPagesController::class, 'contact'])->name('contact');
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');
