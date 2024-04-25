@@ -11,6 +11,6 @@
     <title>{{ config('app.name', 'Laravel') }}</title>
 </head>
 <body>
-    {{ $slot }}
+    <h1>Laravel Projects</h1>
 </body>
 </html>
