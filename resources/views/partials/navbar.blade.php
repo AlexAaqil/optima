@@ -29,15 +29,17 @@
 
     <div class="nav_authentication">
         @if(Auth::user())
-            <a href="{{ route('profile.edit') }}" class="profile">
-                <i class="fa fa-user"></i>
-            </a>
-
-            <form action="{{ route('logout') }}" method="post">
-                @csrf
-
-                <button type="submit" class="logout">Logout</button>
-            </form>
+            <div class="actions">
+                <a href="{{ route('profile.edit') }}" class="profile">
+                    <i class="fa fa-user"></i>
+                </a>
+    
+                <form action="{{ route('logout') }}" method="post">
+                    @csrf
+    
+                    <button type="submit" class="logout_btn">Logout</button>
+                </form>
+            </div>
         @else
             <a href="{{ route('login') }}" class="login_btn">Login</a>
         @endif

@@ -37,13 +37,28 @@ nav {
 
     .nav_authentication {
         margin-left: 2em;
-        .login_btn {
-            background: #000;
+
+        .login_btn,
+        .logout_btn {
             color: #ededed;
-            padding: 6px 18px;
+            padding: 6px 16px;
             border-radius: 32px;
             text-transform: uppercase;
             font-weight: bold;
+        }
+
+        .actions {
+            display: flex;
+            align-items: center;
+            gap: 1em;
+
+            .logout_btn {
+                background: rgb(240, 6, 6);
+            }
+        }
+
+        .login_btn {
+            background: #000;
         }
     }
 
@@ -54,7 +69,7 @@ nav {
 
 @media screen and (width <= 726px) {
     nav {
-        grid-template-columns: 50% 1fr auto;
+        grid-template-columns: 1fr auto auto auto;
         gap: 0.5em;
 
         .nav_links {

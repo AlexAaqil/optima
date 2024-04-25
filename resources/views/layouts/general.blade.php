@@ -1,7 +1,10 @@
 <x-app-layout>
     @include('partials.navbar')
 
+    
     <main {{ $attributes->merge(['class' => '']) }}>
+        @include('partials.messages')
+        
         {{ $slot }}
     </main>
 

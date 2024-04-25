@@ -118,23 +118,28 @@ form button {
   background: #000;
   color: #fff;
 }
-.custom_form form button {
+.custom_form form img {
+  width: 150px;
+}
+.custom_form button,
+.custom_form .btn_danger,
+.custom_form .btn_link {
   padding: 6px 12px;
   font-weight: bold;
   font-size: 1em;
   border-radius: 4px;
+  color: #fff;
+}
+.custom_form button {
   background: #000;
-  color: #fff;
 }
-.custom_form form .btn_danger {
+.custom_form .btn_danger {
   background: rgb(245, 2, 2);
-  color: #fff;
-  font-weight: bold;
-  padding: 4px 8px;
-  border-radius: 4px;
 }
-.custom_form form img {
-  width: 150px;
+.custom_form .btn_link {
+  text-decoration: none;
+  color: #000;
+  border: 1px solid #000;
 }
 .custom_form p {
   margin: 0.8em 0 0.5em;
@@ -185,13 +190,24 @@ nav .nav_links .active {
 nav .nav_authentication {
   margin-left: 2em;
 }
-nav .nav_authentication .login_btn {
-  background: #000;
+nav .nav_authentication .login_btn,
+nav .nav_authentication .logout_btn {
   color: #ededed;
-  padding: 6px 18px;
+  padding: 6px 16px;
   border-radius: 32px;
   text-transform: uppercase;
   font-weight: bold;
+}
+nav .nav_authentication .actions {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+nav .nav_authentication .actions .logout_btn {
+  background: rgb(240, 6, 6);
+}
+nav .nav_authentication .login_btn {
+  background: #000;
 }
 nav .burger_menu {
   display: none;
@@ -199,7 +215,7 @@ nav .burger_menu {
 
 @media screen and (width <= 726px) {
   nav {
-    grid-template-columns: 50% 1fr auto;
+    grid-template-columns: 1fr auto auto auto;
     gap: 0.5em;
   }
   nav .nav_links {
@@ -257,6 +273,51 @@ nav .burger_menu {
     transform: rotate(45deg) translate(-5px, -6px);
   }
 }
+.alert {
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  position: absolute;
+  right: 0;
+  top: 10vh;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  z-index: 10;
+}
+
+.Admin .alert {
+  top: 0;
+}
+
+.alert-danger {
+  background: rgb(235, 4, 4);
+}
+
+.alert-success {
+  background: rgb(2, 168, 29);
+}
+
+.alert-status {
+  background: rgb(194, 128, 5);
+}
+
+.alert-warning {
+  background: rgb(194, 128, 5);
+}
+
+.inline_alert {
+  margin: 0.1em 0 0;
+  font-weight: bold;
+  color: rgb(235, 4, 4);
+}
+
+.inline_alert_success {
+  padding: 0.5em;
+  margin: 0.5em 0;
+  color: rgb(2, 168, 29);
+}
+
 .Authentication {
   display: flex;
   align-items: center;
@@ -274,9 +335,6 @@ nav .burger_menu {
 }
 .Authentication .verify_email {
   text-align: center;
-}
-.Authentication .verify_email .message {
-  color: green;
 }
 
 .profile_update {
@@ -321,4 +379,13 @@ nav .burger_menu {
   .profile_update .section {
     width: 95%;
   }
+}
+.UserDashboard .container h1 {
+  font-size: 1.35em;
+}
+.UserDashboard .container .custom_form {
+  margin: 1em 0;
+  display: flex;
+  align-items: center;
+  gap: 1em;
 }/*# sourceMappingURL=styles.css.map */
