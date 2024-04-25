@@ -1,9 +1,9 @@
 <x-admin-layout class="Dashboard">
-    <section class="hero">
+    <div class="hero">
         <h1>Hi {{ Auth::user()->first_name }}</h1>
-    </section>
+    </div>
 
-    <section class="stats">
+    <div class="stats">
         <div class="stat">
             <div class="icon">
                 <i class="fas fa-users"></i>
@@ -23,5 +23,5 @@
                 <span>xxx</span>
             </div>
         </div>
-    </section>
+    </div>
 </x-admin-layout>

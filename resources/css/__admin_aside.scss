@@ -118,18 +118,11 @@ aside {
                 text-align: center;
 
                 form {
-                    display: flex;
-                    justify-content: center;
-
                     button {
                         background-color: red;
                         color: #fff;
                         border-radius: 4px;
                         padding: 8px 16px;
-                        display: flex;
-                        align-items: center;
-                        gap: 0.5em;
-
                         i {
                             color: #fff;
                         }
