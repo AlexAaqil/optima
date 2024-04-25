@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\GeneralPagesController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\UserController;
 
 Route::get('/', [GeneralPagesController::class, 'home'])->name('home');
 Route::get('/about', [GeneralPagesController::class, 'about'])->name('about');
@@ -25,4 +26,7 @@ Route::middleware(['auth', 'verified', 'admin'])
 ->prefix('admin')
 ->group(function() {
     Route::get('/dashboard', [DashboardController::class, 'admin_dashboard'])->name('admin.dashboard');
+
+    Route::get('/users', [UserController::class, 'index'])->name('users.index');
+    Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('users.destroy');
 });

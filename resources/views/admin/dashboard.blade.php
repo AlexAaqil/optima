@@ -9,7 +9,7 @@
                 <i class="fas fa-users"></i>
             </div>
             <div class="text">
-                <a href="">Users</a>
+                <a href="{{ route('users.index') }}">Users</a>
                 <span>{{ $count_users }}</span>
             </div>
         </div>
