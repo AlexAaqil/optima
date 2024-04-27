@@ -266,6 +266,60 @@ nav .burger_menu {
     transform: rotate(45deg) translate(-5px, -6px);
   }
 }
+footer {
+  padding: 16px 0 0;
+  background: hsl(238, 38%, 16%);
+  color: #fff;
+}
+footer .container a {
+  text-decoration: none;
+  color: #fff;
+}
+footer .container div {
+  margin: 0 0 1em;
+}
+footer .container .branding .image {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 0.5em;
+  padding: 8px;
+}
+footer .container .branding .image img {
+  width: 100%;
+  height: 100%;
+}
+footer .container .branding h1 {
+  font-size: 1.25em;
+  text-transform: uppercase;
+  margin: 0.5em 0;
+}
+footer .container .links {
+  display: grid;
+  gap: 0.5em;
+}
+footer .container .socials a img {
+  width: 20px;
+  margin-right: 10px;
+}
+footer .copyright {
+  text-align: center;
+  border-top: 1px solid grey;
+  padding: 8px;
+}
+
+@media screen and (width >= 726px) {
+  footer .container {
+    display: grid;
+    grid-template-columns: 30% 1fr 1fr;
+    justify-items: center;
+  }
+  footer .container .branding {
+    text-align: center;
+  }
+  footer .container .links {
+    gap: 0.2em;
+  }
+}
 .alert {
   padding: 0.5em 1em;
   border-radius: 4px;
