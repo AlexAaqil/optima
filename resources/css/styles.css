@@ -612,6 +612,12 @@ aside .footer .logout form button i {
   text-decoration: none;
   color: blue;
 }
+.Admin .admin_content .body table tbody tr td .td_span {
+  font-size: 0.65em;
+  background: rgb(193, 193, 255);
+  padding: 2px 8px;
+  border-radius: 32px;
+}
 .Admin .admin_content .body table tbody tr .actions {
   display: flex;
   justify-content: center;

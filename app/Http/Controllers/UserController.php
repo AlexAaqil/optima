@@ -8,7 +8,7 @@ class UserController extends Controller
 {
     public function index()
     {
-        $users = User::latest()->get();
+        $users = User::orderByDesc('user_level')->orderByDesc('created_at')->get();
 
         return view("admin.users.index", compact("users"));
     }

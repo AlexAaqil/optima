@@ -23,7 +23,10 @@
                                 {{ $id++ }}
                             </a>
                         </td>
-                        <td>{{ $user->first_name .' '. Auth::user()->last_name }}</td>
+                        <td>
+                            {{ $user->first_name .' '. Auth::user()->last_name }} 
+                            {!! $user->user_level == 2 ? '<span class="td_span">admin</span>' : '' !!}
+                        </td>
                         <td>{{ $user->email }}</td>
                         <td>{{ $user->phone_number }}</td>
                         <td class="actions">

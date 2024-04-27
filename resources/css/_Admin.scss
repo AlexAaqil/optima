@@ -73,9 +73,17 @@
 
                         td {
                             padding: 4px 6px;
+
                             a {
                                 text-decoration: none;
                                 color: blue;
+                            }
+
+                            .td_span {
+                                font-size: 0.65em;
+                                background: rgb(193, 193, 255);
+                                padding: 2px 8px;
+                                border-radius: 32px;
                             }
                         }
 
