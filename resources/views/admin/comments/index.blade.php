@@ -1,7 +1,8 @@
 <x-admin-layout class="Contact">
-    <div class="header">
-        <h1>Comments <span>({{ count($comments) }})</span></h1>
-    </div>
+    <x-admin-header 
+        header_title="Comments"
+        :total_count="count($comments)"
+    />
 
     <div class="body">
         <table>

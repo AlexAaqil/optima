@@ -1,7 +1,8 @@
 <x-admin-layout class="Users">
-    <div class="header">
-        <h1>Users <span>({{ count($users) }})</span></h1>
-    </div>
+    <x-admin-header 
+        header_title="Users" 
+        :total_count="count($users)"
+    />
 
     <div class="body">
         <table>

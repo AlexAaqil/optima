@@ -669,10 +669,13 @@ aside .footer .logout form button i {
   padding: 4px 15px;
 }
 .Admin .admin_content .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   margin: 0 0 0.5em;
 }
 .Admin .admin_content .header h1 {
-  font-size: 1.25em;
+  font-size: 1.15em;
 }
 .Admin .admin_content .header h1 span {
   font-size: 0.85em;
@@ -684,13 +687,13 @@ aside .footer .logout form button i {
   padding: 4px 16px;
 }
 .Admin .admin_content .header .header_btn {
-  margin: 0.5em 0;
+  margin: 0;
 }
 .Admin .admin_content .header .header_btn a {
   text-decoration: none;
   background: #000;
   color: #fff;
-  padding: 6px 12px;
+  padding: 4px 8px;
   border-radius: 4px;
 }
 .Admin .admin_content .body table {
@@ -752,4 +755,16 @@ aside .footer .logout form button i {
   background: none;
   padding: 0;
   cursor: pointer;
+}
+
+@media screen and (width <= 726px) {
+  .Admin .admin_content .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5em;
+  }
+  .Admin .admin_content .body {
+    width: 100%;
+    overflow: scroll;
+  }
 }/*# sourceMappingURL=styles.css.map */
