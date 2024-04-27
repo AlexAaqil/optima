@@ -422,6 +422,7 @@ aside .footer .logout form button i {
   }
   aside .footer .logout form button {
     display: flex;
+    align-items: center;
     gap: 0.2em;
     background-color: red;
     color: #fff;
