@@ -1,6 +1,7 @@
 <aside>
     <div class="brand">
         <a href="{{ route('home') }}">
+            <img src="{{ asset('assets/images/default_profile.jpg') }}" alt="Logo">
             <h1>Aaqil Softwares</h1>
         </a>
     </div>
@@ -26,7 +27,9 @@
 
     <div class="footer">
         <div class="profile">
-            <img src="{{ asset('assets/images/default_profile.jpg') }}" alt="Profile Image">
+            <a href="{{ route('profile.edit') }}">
+                <img src="{{ asset('assets/images/default_profile.jpg') }}" alt="Profile Image">
+            </a>
             <span class="text">
                 <a href="{{ route('profile.edit') }}">
                     {{ Auth::user()->first_name . ' ' . Auth::user()->last_name }}
