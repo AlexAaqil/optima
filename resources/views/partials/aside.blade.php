@@ -28,9 +28,10 @@
         <div class="profile">
             <img src="{{ asset('assets/images/default_profile.jpg') }}" alt="Profile Image">
             <span class="text">
-                <a href="#">
+                <a href="{{ route('profile.edit') }}">
                     {{ Auth::user()->first_name . ' ' . Auth::user()->last_name }}
                 </a>
+                <span>{{ Auth::user()->email }}</span>
             </span>
         </div>
 
