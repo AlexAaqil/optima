@@ -2,7 +2,7 @@
     <div class="brand">
         <a href="{{ route('home') }}">
             <img src="{{ asset('assets/images/default_profile.jpg') }}" alt="Logo">
-            <h1>Aaqil Softwares</h1>
+            <h1>{{ env('APP_NAME') }}</h1>
         </a>
     </div>
 

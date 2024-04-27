@@ -1,8 +1,8 @@
 <x-general-layout class="Contact">
     <div class="container">
         <div class="text">
-            <p>+254 746 055 487</p>
-            <p>info@laravel.com</p>
+            <p>{{ config('app.phone_number') }}</p>
+            <p>{{ config('app.email_address') }}</p>
             <p class="hours">
                 <span>Mon - Fri</span>
                 <span>08:00 AM - 06:00 PM</span>
