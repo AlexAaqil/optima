@@ -20,7 +20,7 @@
             </div>
             <div class="text">
                 <a href="">Comments</a>
-                <span>xxx</span>
+                <span>{{ $count_comments }}</span>
             </div>
         </div>
     </div>
