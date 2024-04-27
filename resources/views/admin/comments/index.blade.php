@@ -1,4 +1,4 @@
-<x-admin-layout class="Comments">
+<x-admin-layout class="Contact">
     <div class="header">
         <h1>Comments <span>({{ count($comments) }})</span></h1>
     </div>
@@ -26,10 +26,12 @@
                                     {{ $id++ }}
                                 </a>
                             </td>
-                            <td>{{ $comment->full_name }}</td>
+                            <td>{{ $comment->name }}</td>
                             <td>{{ $comment->email }}</td>
                             <td>{{ $comment->phone_number }}</td>
-                            <td>{{ $comment->message }}</td>
+                            <td>
+                                {{ Illuminate\Support\Str::limit($comment->message, 35, ' ...') }}
+                            </td>
                             <td class="actions">
                                 <div class="action">
                                     <form id="deleteForm_{{ $comment->id }}" action="{{ route('comments.destroy', ['comment' => $comment->id]) }}" method="post">

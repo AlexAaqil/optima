@@ -10,7 +10,7 @@
             $navLinks = [
                 ['route' => 'admin.dashboard', 'icon' => 'fas fa-home', 'text' => 'Dashboard'],
                 ['route' => 'users.index', 'icon' => 'fas fa-users', 'text' => 'Users'],
-                ['route' => '', 'icon' => 'fas fa-comment', 'text' => 'Comments'],
+                ['route' => 'comments.index', 'icon' => 'fas fa-comment', 'text' => 'Comments'],
             ];
         @endphp
 

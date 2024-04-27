@@ -1,9 +1,9 @@
-<x-admin-layout class="Comments">
-    <div class="custom_form">
+<x-admin-layout class="Contact">
+    <div class="custom_form edit_comment">
         <div class="header">
             <h1>Update Comment</h1>
             <p>
-                <span>{{ $comment->full_name }}</span>
+                <span>{{ $comment->name }}</span>
                 <span>{{ $comment->email }}</span>
                 <span>{{ $comment->phone_number }}</span>
             </p>

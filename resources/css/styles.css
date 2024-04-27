@@ -9,10 +9,6 @@
   padding: 10px 5%;
 }
 
-button {
-  border: none;
-}
-
 form input,
 form select,
 form textarea {
@@ -24,17 +20,42 @@ form textarea {
   margin: 0.3em 0 0;
 }
 form button {
+  padding: 10px 32px;
+  font-weight: bold;
+  font-size: 1em;
+  border: none;
+  border-radius: 4px;
+  background: #000;
+  color: #fff;
   cursor: pointer;
 }
 
-.custom_form h1 {
-  font-size: 1.1em;
-  text-align: center;
-  margin: 0 0 0.5em;
+.custom_form {
+  border-radius: 6px;
+  padding: 0 0 15px 0;
+}
+.custom_form .header {
+  border-radius: 6px 6px 0 0;
   padding: 0.5em 0;
   background: #000;
+  text-align: center;
   color: #fff;
-  border-radius: 6px 6px 0 0;
+}
+.custom_form .header h1 {
+  font-size: 1em;
+  margin: 0 0 0.5em;
+}
+.custom_form .header p {
+  display: grid;
+  gap: 2px;
+  color: #ededef;
+  margin: unset;
+}
+.custom_form .header p span {
+  font-size: 0.9em;
+}
+.custom_form form {
+  padding: 0 15px;
 }
 .custom_form form .input_group {
   padding: 0.3em 0;
@@ -44,10 +65,6 @@ form button {
 .custom_form form .input_group label {
   font-weight: 500;
   font-size: 0.95em;
-}
-.custom_form form .input_group label span {
-  font-weight: bold;
-  color: red;
 }
 .custom_form form .input_group .custom_radio_buttons {
   display: flex;
@@ -59,9 +76,6 @@ form button {
   width: 30%;
   display: flex;
   align-items: center;
-}
-.custom_form form .input_group .custom_radio_buttons label span {
-  color: #000;
 }
 .custom_form form .input_group .custom_radio_buttons label .option_radio {
   position: relative;
@@ -99,27 +113,6 @@ form button {
   background: #fff;
   border: 2px solid #d6d6d6;
   border-radius: 50%;
-}
-.custom_form form .row_btns {
-  margin: 0.5em 0;
-  display: flex;
-  align-items: center;
-  gap: 1em;
-}
-.custom_form form .row_btns a {
-  text-decoration: none;
-  padding: 4px 12px;
-  border-radius: 4px;
-  color: #000;
-  border: 1px solid #000;
-  transition: all 0.4s ease;
-}
-.custom_form form .row_btns a:hover {
-  background: #000;
-  color: #fff;
-}
-.custom_form form img {
-  width: 150px;
 }
 .custom_form button,
 .custom_form .btn_danger,
@@ -439,6 +432,57 @@ aside .footer .logout form button i {
     color: #fff;
   }
 }
+.Contact .container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5em;
+  align-items: center;
+}
+@media screen and (width >= 726px) {
+  .Contact .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.Contact .container .text p {
+  font-size: 1.25em;
+  color: rgb(53, 53, 53);
+}
+@media screen and (width >= 726px) {
+  .Contact .container .text p {
+    font-size: 2em;
+  }
+}
+.Contact .container .text p span {
+  display: grid;
+}
+.Contact .container .text .hours {
+  margin: 0.8em 0 0;
+}
+
+.Admin .Contact .strikethrough {
+  text-decoration: line-through;
+}
+.Admin .Contact .edit_comment {
+  border: 1px solid #d1d0d0;
+}
+.Admin .Contact .edit_comment .comment {
+  background: #dcfcfa;
+  width: 75%;
+  margin: 0.5em 0 2em;
+  padding: 8px 15px;
+  border-radius: 8px 8px 32px 8px;
+  box-shadow: 2px 2px 6px #cacaca;
+}
+.Admin .Contact .edit_comment form {
+  padding: 10px 15px;
+}
+@media screen and (width >= 726px) {
+  .Admin .Contact .edit_comment {
+    width: 60%;
+    margin: auto;
+  }
+}
+
 .Authentication {
   display: flex;
   align-items: center;
