@@ -1,4 +1,4 @@
-<x-general-layout class="HomePage">
+<x-general-layout class="Home">
     <section class="Hero">
         <div class="container">
             <h1>Hero Section</h1>
