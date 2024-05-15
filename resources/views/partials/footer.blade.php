@@ -17,8 +17,8 @@
 
         <div class="contacts">
             <div class="details">
-                <p>{{ config('app.phone_number') }}</p>
-                <p>info@twangizametals.com</p>
+                <p>{{ config('globals.phone_number') }}</p>
+                <p>{{ config('globals.email') }}</p>
             </div>
         </div>
     </div>

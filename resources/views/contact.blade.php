@@ -1,8 +1,8 @@
 <x-general-layout class="Contact">
     <div class="container">
         <div class="text">
-            <p>{{ config('app.phone_number') }}</p>
-            <p>{{ config('app.email_address') }}</p>
+            <p>{{ config('globals.phone_number') }}</p>
+            <p>{{ config('globals.email') }}</p>
             <p class="hours">
                 <span>Mon - Fri</span>
                 <span>08:00 AM - 06:00 PM</span>

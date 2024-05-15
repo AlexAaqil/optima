@@ -15,9 +15,6 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
-    'phone_number' => '+254 746 055 487',
-    'email_address' => 'info@laravel.com',
-
     /*
     |--------------------------------------------------------------------------
     | Application Environment
