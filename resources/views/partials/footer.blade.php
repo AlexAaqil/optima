@@ -20,6 +20,16 @@
                 <p>{{ config('globals.phone_number') }}</p>
                 <p>{{ config('globals.email') }}</p>
             </div>
+
+            <div class="socials">
+                <a href="#">
+                    <img src="{{ asset('assets/images/whatsapp.png') }}" alt="{{ env('APP_NAME') }} Whatsapp">
+                </a>
+
+                <a href="#">
+                    <img src="{{ asset('assets/images/instagram.png') }}" alt="{{ env('APP_NAME') }} Instagram">
+                </a>
+            </div>
         </div>
     </div>
 
