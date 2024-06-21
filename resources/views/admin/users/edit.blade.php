@@ -47,5 +47,19 @@
 
             <button type="submit">Update</button>
         </form>
+
+        <form id="deleteForm_{{ $user->id }}" action="{{ route('users.destroy', ['user' => $user->id]) }}" method="post">
+            @csrf
+            @method('DELETE')
+
+            <button type="button" class="delete_btn" onclick="deleteItem({{ $user->id }}, 'user');">
+                <i class="fas fa-trash-alt delete"></i>
+                <span>Delete</span>
+            </button>
+        </form>
     </div>
+
+    <x-slot name="javascript">
+        <script src="{{ asset('assets/js/sweetalert.js') }}"></script>
+    </x-slot>
 </x-admin-layout>
