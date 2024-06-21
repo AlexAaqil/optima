@@ -5,30 +5,30 @@
     />
 
     <div class="body">
-        <table>
+        <table class="table">
             <thead>
-                <th>ID</th>
+                <th class="center">ID</th>
                 <th>Name</th>
                 <th>Email</th>
                 <th>Phone Number</th>
-                <th>Action</th>
+                <th class="center">Action</th>
             </thead>
 
             <tbody>
                 @if(count($users) > 0)
                     @php $id = 1 @endphp
                     @foreach($users as $user)
-                    <tr>
-                        <td>
-                            <a href="#">
+                    <tr class="searchable {{ $user->user_status == '0' ? 'inactive_user' : 'active' }}">
+                        <td class="center">
+                            <a href="{{ route('user.edit', ['user' => $user->id]) }}">
                                 {{ $id++ }}
                             </a>
                         </td>
                         <td>
                             {{ $user->first_name .' '. Auth::user()->last_name }} 
-                            {!! $user->user_level == 2 ? '<span class="td_span">admin</span>' : '' !!}
+                            {!! $user->user_level == 0 ? '<span class="td_span">admin</span>' : '' !!}
                         </td>
-                        <td>{{ $user->email }}</td>
+                        <td class="{{ $user->email_verified_at != Null ? 'verified' : 'unverified'  }}">{{ $user->email }}</td>
                         <td>{{ $user->phone_number }}</td>
                         <td class="actions">
                             <div class="action">
@@ -52,4 +52,8 @@
             </tbody>
         </table>
     </div>
+
+    <x-slot name="javascript">
+        <script src="{{ asset('assets/js/sweetalert.js') }}"></script>
+    </x-slot>
 </x-admin-layout>

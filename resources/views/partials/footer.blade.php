@@ -1,28 +1,28 @@
 <footer>
     <div class="container">
-        <div class="branding">
+        <section class="branding">
             <div class="image">
                 <x-app-logo />
             </div>
-            <h1>{{ env('APP_NAME') }}</h1>
+            <p class="app_name">{{ env('APP_NAME') }}</p>
             <p>Some cool slogan.</p>
-        </div>
+        </section>
 
-        <div class="links">
+        <section class="links">
             <a href="{{ route('home') }}">Home</a>
             <a href="{{ route('about') }}">About</a>
             <a href="{{ route('services') }}">Services</a>
             <a href="{{ route('contact') }}">Contact</a>
-        </div>
+        </section>
 
-        <div class="contacts">
+        <section class="contacts">
             <div class="details">
                 <p>{{ config('globals.phone_number') }}</p>
                 <p>{{ config('globals.email') }}</p>
             </div>
 
             <div class="socials">
-                <a href="#">
+                <a href="https://wa.me/{{config('globals.whatsapp_number')}}">
                     <img src="{{ asset('assets/images/whatsapp.png') }}" alt="{{ env('APP_NAME') }} Whatsapp">
                 </a>
 
@@ -30,7 +30,7 @@
                     <img src="{{ asset('assets/images/instagram.png') }}" alt="{{ env('APP_NAME') }} Instagram">
                 </a>
             </div>
-        </div>
+        </section>
     </div>
 
     <p class="copyright">&copy; 2024 | All rights reserved</p>

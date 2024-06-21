@@ -1,0 +1,12 @@
+TODOs
+# user-messages - make the table rows sortable for automatic ordering.
+# users - edit functionality.
+# admin - search functionality.
+# navbar - solve error for pages without the burger menu.
+# signup | contact - use proper phone number inputs with country codes.
+
+
+NOTES
+User levels:
+0 - admin
+1 - user

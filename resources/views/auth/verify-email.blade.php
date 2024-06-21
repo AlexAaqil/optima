@@ -1,5 +1,5 @@
 <x-general-layout class="Authentication">
-    <div class="container verify_email">
+    <div class="container Verify_email">
         <div class="header">
             <p>Thanks for signing up! Before getting started, kindly verify your email address by clicking on the link we just emailed to you.</p>
             <p>If you didn't receive the email, we will gladly send you another.</p>

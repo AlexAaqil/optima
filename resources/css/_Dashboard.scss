@@ -1,3 +1,55 @@
+$dashboard_background: #dedefd;
+
+.Admin_dashboard {
+    .Hero {
+        p {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    }
+
+    .Stats {
+        margin: 1em 0;
+        @include grid(6);
+
+        .stat {
+            border-radius: 8px;
+            padding: 6px 12px;
+            display: grid;
+            gap: 0.8em;
+            align-items: center;
+            grid-template-columns: 25px auto;
+            background: $dashboard_background;
+
+            .icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 28px;
+                height: 28px;
+                padding: 4px;
+                border-radius: 50%;
+                background: darken($dashboard_background, $amount: 20);
+            }
+
+            .text {
+                display: grid;
+                gap: 0.2em;
+
+                a {
+                    font-size: 0.85em;
+                    color: $dark_color;
+                    text-decoration: none;
+                }
+
+                span {
+                    font-size: 1.2em;
+                }
+            }
+        }
+    }
+}
+
 .UserDashboard {
     .container {
         h1 {
@@ -9,56 +61,6 @@
             display: flex;
             align-items: center;
             gap: 1em;
-        }
-    }
-}
-
-.Admin {
-    .Dashboard {
-        .hero {
-            h1 {
-                font-size: 1.2em;
-            }
-        }
-
-        .stats {
-            @include grid(6);
-            margin: 1em 0;
-
-            .stat {
-                background: rgb(222, 222, 253);
-                padding: 8px 16px;
-                border-radius: 8px;
-                display: grid;
-                grid-template-columns: 30px auto;
-                align-items: center;
-                gap: 0.8em;
-
-                .icon {
-                    background: #a3a2fa;
-                    height: 30px;
-                    width: 30px;
-                    border-radius: 50%;
-                    padding: 4px;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                }
-
-                .text {
-                    display: grid;
-
-                    a {
-                        text-decoration: none;
-                        color: #000;
-                        font-size: 0.9em;
-                    }
-
-                    span {
-                        font-size: 1.2em;
-                    }
-                }
-            }
         }
     }
 }

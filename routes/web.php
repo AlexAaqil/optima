@@ -5,13 +5,13 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\GeneralPagesController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\CommentController;
+use App\Http\Controllers\UserMessageController;
 
 Route::get('/', [GeneralPagesController::class, 'home'])->name('home');
 Route::get('/about', [GeneralPagesController::class, 'about'])->name('about');
 Route::get('/services', [GeneralPagesController::class, 'services'])->name('services');
 Route::get('/contact', [GeneralPagesController::class, 'contact'])->name('contact');
-Route::post('/contact', [CommentController::class, 'store'])->name('comments.store');
+Route::post('/contact', [UserMessageController::class, 'store'])->name('user-messages.store');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/home', [DashboardController::class, 'index'])->name('dashboard.index');
@@ -30,7 +30,9 @@ Route::middleware(['auth', 'verified', 'admin'])
     Route::get('/dashboard', [DashboardController::class, 'admin_dashboard'])->name('admin.dashboard');
 
     Route::get('/users', [UserController::class, 'index'])->name('users.index');
+    Route::get('/users/{user}/edit', [UserController::class, 'edit'])->name('user.edit');
+    Route::patch('/users/{user}', [UserController::class, 'update'])->name('user.update');
     Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('users.destroy');
 
-    Route::resource('comments', CommentController::class)->only('index', 'edit', 'update', 'destroy');
+    Route::resource('user-messages', UserMessageController::class)->only('index', 'edit', 'update', 'destroy');
 });

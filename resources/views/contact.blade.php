@@ -1,8 +1,13 @@
 <x-general-layout class="Contact">
     <div class="container">
         <div class="text">
-            <p>{{ config('globals.phone_number') }}</p>
-            <p>{{ config('globals.email') }}</p>
+            <h1>Get in Touch</h1>
+            
+            <p>
+                <span>{{ config('globals.phone_number') }}</span>
+                <span>{{ config('globals.email') }}</span>
+            </p>
+
             <p class="hours">
                 <span>Mon - Fri</span>
                 <span>08:00 AM - 06:00 PM</span>
@@ -10,7 +15,7 @@
         </div>
 
         <div class="custom_form">
-            <form action="{{ route('comments.store') }}" method="post">
+            <form action="{{ route('user-messages.store') }}" method="post">
                 @csrf
 
                 <div class="input_group">
@@ -33,7 +38,7 @@
 
                 <div class="input_group">
                     <label for="message">Message</label>
-                    <textarea name="message" id="message" cols="30" rows="7" placeholder="Enter your message"></textarea>
+                    <textarea name="message" id="message" cols="30" rows="7" placeholder="Enter your message">{{ old('message') }}</textarea>
                     <span class="inline_alert">{{ $errors->first('message') }}</span>
                 </div>
 

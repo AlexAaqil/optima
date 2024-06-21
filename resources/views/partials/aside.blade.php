@@ -1,9 +1,6 @@
 <aside>
     <div class="brand">
-        <a href="{{ route('home') }}">
-            <img src="{{ asset('assets/images/logo.jpg') }}" alt="Logo">
-            <h1>{{ env('APP_NAME') }}</h1>
-        </a>
+        <a href="{{ route('home') }}">{{ env('APP_NAME') }}</a>
     </div>
 
     <ul class="links">
@@ -11,7 +8,7 @@
             $navLinks = [
                 ['route' => 'admin.dashboard', 'icon' => 'fas fa-home', 'text' => 'Dashboard'],
                 ['route' => 'users.index', 'icon' => 'fas fa-users', 'text' => 'Users'],
-                ['route' => 'comments.index', 'icon' => 'fas fa-comment', 'text' => 'Comments'],
+                ['route' => 'user-messages.index', 'icon' => 'fas fa-comment', 'text' => 'Messages'],
             ];
         @endphp
 
@@ -43,8 +40,8 @@
                 @csrf
 
                 <button type="submit">
-                    <i class="fas fa-sign-out-alt"></i>
                     <span class="text">Logout</span>
+                    <i class="fas fa-sign-out-alt"></i>
                 </button>
             </form>
         </div>

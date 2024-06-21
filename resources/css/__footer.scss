@@ -1,57 +1,60 @@
 footer {
+    background: $theme_1;
     padding: 16px 0 0;
-    background: $theme-1;
-    color: $text-color;
+
+    * {
+        color: $light_color
+    }
 
     .container {
-        a {
-            text-decoration: none;
-            color: $text-color;
-        }
-    
-        div {
-            margin: 0 0 1em;
+        section {
+            margin: 0 0 1.5em;
+            a {
+                text-decoration: none;
+            }
         }
 
         .branding {
             .image {
-                width: 100px;
                 height: 100px;
-                margin: 0 auto 0.5em;
-                padding: 8px;
-
+                width: 100px;
+ 
                 img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
+                    object-fit: contain;
                 }
             }
 
-            h1 {
-                font-size: 1.25em;
-                text-transform: uppercase;
-                margin: 0.5em 0;
+            .app_name {
+                font-size: 1.5em;
+                font-weight: bold;
+                margin: 0.2em 0;
             }
         }
-    
+
         .links {
-            display: grid;
+            display: flex;
+            flex-direction: column;
             gap: 0.5em;
         }
 
-        .socials {
-            a {
+        .contacts {
+            p {
+                margin: 0.2em 0;
+            }
+    
+            .socials {
+                margin: 0.6em 0 0;
                 img {
                     width: 20px;
-                    margin-right: 10px;
+                    margin-right: 0.5em;
                 }
             }
         }
     }
 
     .copyright {
+        border-top: 1px solid $faded;
         text-align: center;
-        border-top: 1px solid grey;
         padding: 8px;
     }
 }
@@ -65,10 +68,9 @@ footer {
 
             .branding {
                 text-align: center;
-            }
-
-            .links {
-                gap: 0.2em;
+                .image {
+                    margin: auto;
+                }
             }
         }
     }

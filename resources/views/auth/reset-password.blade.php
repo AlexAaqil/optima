@@ -1,7 +1,9 @@
 <x-general-layout class="Authentication">
-    <div class="container reset_password">
+    <div class="container Reset_password">
         <div class="custom_form">
-            <p>Set a new password that's complex but easy to remember.</p>
+            <div class="header">
+                <p>Set a new password that's complex but easy to remember.</p>
+            </div>
 
             <form action="{{ route('password.store') }}" method="post">
                 @csrf

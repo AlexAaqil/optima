@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use App\Models\Comment;
+use App\Models\UserMessage;
 
 class DashboardController extends Controller
 {
@@ -15,7 +15,7 @@ class DashboardController extends Controller
         {
             return redirect()->route('dashboard');
         }
-        else if($user_level == 2)
+        else if($user_level == 0)
         {
             return redirect()->route('admin.dashboard');
         }
@@ -33,11 +33,11 @@ class DashboardController extends Controller
     public function admin_dashboard()
     {
         $count_users = User::count();
-        $count_comments = Comment::count();
+        $count_user_messages = UserMessage::count();
 
         return view('admin.dashboard', compact(
             'count_users',
-            'count_comments',
+            'count_user_messages',
         ));
     }
 }

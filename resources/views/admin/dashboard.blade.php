@@ -1,16 +1,16 @@
-<x-admin-layout class="Dashboard">
-    <div class="hero">
-        <h1>Hi {{ Auth::user()->first_name }}</h1>
-    </div>
+<x-admin-layout class="Admin_dashboard">
+    <section class="Hero">
+        <p>Hi {{ Auth::user()->first_name }}</p>
+    </section>
 
-    <div class="stats">
+    <section class="Stats">
         <div class="stat">
             <div class="icon">
                 <i class="fas fa-users"></i>
             </div>
             <div class="text">
-                <a href="{{ route('users.index') }}">Users</a>
                 <span>{{ $count_users }}</span>
+                <a href="{{ route('users.index') }}">Users</a>
             </div>
         </div>
 
@@ -19,9 +19,9 @@
                 <i class="fas fa-comment"></i>
             </div>
             <div class="text">
-                <a href="">Comments</a>
-                <span>{{ $count_comments }}</span>
+                <span>{{ $count_user_messages }}</span>
+                <a href="{{ route('user-messages.index') }}">Messages</a>
             </div>
         </div>
-    </div>
+    </section>
 </x-admin-layout>

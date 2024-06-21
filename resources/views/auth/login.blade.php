@@ -1,5 +1,5 @@
 <x-general-layout class="Authentication">
-    <div class="container login">
+    <section class="container Login">
         <div class="custom_form">
             <form method="POST" action="{{ route('login') }}">
                 @csrf
@@ -17,14 +17,14 @@
                     <input type="password" name="password" id="password" placeholder="Password" value="{{ old('password') }}">
                 </div>
         
-                <div class="input_group">
+                <p>
                     <a href="{{ route('password.request') }}">Forgot your password?</a>
-                </div>
+                </p>
         
                 <button type="submit">Login</button>
             </form>
         
             <p>Don't have an account? <a href="{{ route('register') }}">Signup</a></p>
         </div>
-    </div>
+    </section>
 </x-general-layout>

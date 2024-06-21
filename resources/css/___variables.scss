@@ -1,6 +1,30 @@
-$theme-1: #222831;
-$theme-2: #393e46;
-$theme-3: #00adb5;
-$theme-4: #00fff5;
+$theme_1: #222831;
+$theme_2: #393e46;
+$theme_3: #00adb5;
+$theme_4: #00fff5;
 
-$text-color: #eeeeee;
+$light_color: #eee;
+$dark_color: #000;
+$text_faded: #2b2b2b;
+
+$danger: red;
+$success: green;
+$warning: #c28005;
+$status: #c28005;
+
+$faded: grey;
+
+$primary_button: #000;
+
+.center {
+    text-align: center !important;
+}
+
+.inactive,
+.unverified {
+    color: $danger;
+}
+
+.inactive_user {
+    text-decoration: line-through;
+}

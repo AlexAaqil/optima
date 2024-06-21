@@ -1,3 +1,16 @@
+.center {
+  text-align: center !important;
+}
+
+.inactive,
+.unverified {
+  color: red;
+}
+
+.inactive_user {
+  text-decoration: line-through;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -9,145 +22,130 @@
   padding: 10px 5%;
 }
 
-form input,
-form select,
-form textarea {
+img {
+  height: 100%;
   width: 100%;
-  padding: 0.4em 0.6em;
-  font-size: 1em;
-  border: 1px solid grey;
-  border-radius: 4px;
-  margin: 0.3em 0 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
-form button {
-  padding: 10px 32px;
-  font-weight: bold;
-  font-size: 1em;
-  border: none;
-  border-radius: 4px;
-  background: #000;
-  color: #fff;
+
+button {
   cursor: pointer;
 }
 
-.custom_form {
-  border-radius: 6px;
-  padding: 0 0 15px 0;
-}
-.custom_form .header {
-  border-radius: 6px 6px 0 0;
-  padding: 0.5em 0;
-  background: #000;
+aside {
+  height: 100%;
+  position: fixed;
+  padding: 4px 8px;
   text-align: center;
-  color: #fff;
+  border-right: 1px solid grey;
 }
-.custom_form .header h1 {
-  font-size: 1em;
-  margin: 0 0 0.5em;
+aside .brand,
+aside .text {
+  display: none;
 }
-.custom_form .header p {
-  display: grid;
-  gap: 2px;
-  color: #ededef;
-  margin: unset;
+@media screen and (width >= 726px) {
+  aside .brand,
+  aside .text {
+    display: block;
+  }
 }
-.custom_form .header p span {
-  font-size: 0.9em;
+aside i {
+  font-size: 1.5em;
 }
-.custom_form form {
-  padding: 0 15px;
-}
-.custom_form form .input_group {
-  padding: 0.3em 0;
-  width: 100%;
-  margin: 0 0 0.3em;
-}
-.custom_form form .input_group label {
-  font-weight: 500;
-  font-size: 0.95em;
-}
-.custom_form form .input_group .custom_radio_buttons {
-  display: flex;
-}
-.custom_form form .input_group .custom_radio_buttons label {
-  padding: 0.3em 0.2em;
-  position: relative;
-  cursor: pointer;
-  width: 30%;
-  display: flex;
-  align-items: center;
-}
-.custom_form form .input_group .custom_radio_buttons label .option_radio {
-  position: relative;
-  margin: 0 0.1em 0 0;
-  cursor: pointer;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  width: auto;
-  border: unset;
-}
-.custom_form form .input_group .custom_radio_buttons label .option_radio:before {
-  transition: transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75);
-  transform: scale(0, 0);
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0.125rem;
-  z-index: 1;
-  width: 0.75rem;
-  height: 0.75rem;
-  background: #16a085;
-  border-radius: 50%;
-}
-.custom_form form .input_group .custom_radio_buttons label .option_radio:checked:before {
-  transform: scale(1, 1);
-}
-.custom_form form .input_group .custom_radio_buttons label .option_radio:after {
-  content: "";
-  position: absolute;
-  top: -0.25rem;
-  left: -0.125rem;
-  width: 1rem;
-  height: 1rem;
-  background: #fff;
-  border: 2px solid #d6d6d6;
-  border-radius: 50%;
-}
-.custom_form button,
-.custom_form .btn_danger,
-.custom_form .btn_link {
-  padding: 6px 12px;
-  font-weight: bold;
-  font-size: 1em;
-  border-radius: 4px;
-  color: #fff;
-}
-.custom_form button {
-  background: #000;
-}
-.custom_form .btn_danger {
-  background: rgb(245, 2, 2);
-}
-.custom_form .btn_link {
-  text-decoration: none;
+aside a {
   color: #000;
-  border: 1px solid #000;
+  text-decoration: none;
 }
-.custom_form p {
-  margin: 0.8em 0 0.5em;
+aside ul {
+  list-style: none;
+  margin: 0.8em 0 0;
+}
+aside ul li {
+  padding: 4px;
+}
+aside ul li a {
+  color: #343434;
+}
+aside .footer {
+  position: absolute;
+  bottom: 2em;
+}
+aside .footer .profile img {
+  width: 40px;
+  height: 40px;
+  padding: 2px;
+  border-radius: 50%;
+  border: 1px solid green;
+}
+aside .footer .logout {
+  margin: 0.5em 0 0;
+}
+aside .footer .logout form button {
+  padding: unset;
+  background: none;
+}
+aside .footer .logout form button i {
+  color: red;
+}
+aside .active a {
+  color: #000;
+  font-weight: bold;
 }
 
 @media screen and (width >= 726px) {
-  .custom_form .row_input_group {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0 1em;
+  aside {
+    text-align: left;
   }
-  .custom_form .row_input_group_3 {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 0 1em;
+  aside i {
+    font-size: 0.95em;
+  }
+  aside .brand a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2em;
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  aside ul {
+    margin: 1.8em 0;
+  }
+  aside ul li {
+    border-bottom: 1px solid grey;
+  }
+  aside ul li a {
+    display: flex;
+    align-items: center;
+    gap: 0.2em;
+  }
+  aside .footer {
+    left: 0;
+    margin: 0 0.4em 0;
+  }
+  aside .footer .profile,
+  aside .footer .logout button {
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+  }
+  aside .footer .profile img {
+    width: 35px;
+    height: 35px;
+  }
+  aside .footer .profile span {
+    font-size: 0.8em;
+  }
+  aside .footer .logout form button {
+    justify-content: center;
+    color: #fff;
+    background: red;
+    width: 100%;
+    padding: 6px 8px;
+    text-align: center;
+  }
+  aside .footer .logout form button i {
+    color: #fff;
   }
 }
 nav {
@@ -266,46 +264,181 @@ nav .burger_menu {
     transform: rotate(45deg) translate(-5px, -6px);
   }
 }
+form label {
+  color: #2b2b2b;
+  font-size: 0.95em;
+  margin: 0.1em 0;
+}
+form input,
+form select,
+form textarea {
+  border: 1px solid grey;
+  border-radius: 4px;
+  margin: 0 0 0.5em;
+  padding: 4px 6px;
+  font-size: 1em;
+  width: 100%;
+}
+form button {
+  padding: 8px 12px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 1em;
+}
+
+.action i {
+  font-size: 1em;
+  font-weight: bold;
+}
+.action .update {
+  color: green;
+}
+.action .delete {
+  color: red;
+}
+.action form button {
+  background: none;
+  padding: 2px;
+}
+
+.custom_form {
+  border-radius: 6px;
+}
+.custom_form header {
+  border-radius: 6px 6px 0 0;
+  padding: 0.5em 0;
+  background: #000;
+  text-align: center;
+}
+.custom_form header p {
+  color: #fff;
+  display: grid;
+  gap: 2px;
+  margin: unset;
+}
+.custom_form header p:first-of-type {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 0 0 0.5em;
+}
+.custom_form header p span {
+  font-size: 0.85em;
+}
+.custom_form form .input_group {
+  margin: 0 0 0.3em;
+}
+.custom_form form .input_group .custom_radio_buttons {
+  display: flex;
+}
+.custom_form form .input_group .custom_radio_buttons label {
+  position: relative;
+  padding: 0.3em 0;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  width: 30%;
+}
+.custom_form form .input_group .custom_radio_buttons label .option_radio {
+  margin: 0 0.5em 0 0;
+  position: relative;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  cursor: pointer;
+  border: unset;
+  width: auto;
+}
+.custom_form form .input_group .custom_radio_buttons label .option_radio:before {
+  transition: transform 0.4s cubic-bezier(0.45, 1.8, 0.5, 0.75);
+  transform: scale(0, 0);
+  position: absolute;
+  top: 0;
+  left: 0.125rem;
+  content: "";
+  z-index: 1;
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 50%;
+  background: #16a085;
+}
+.custom_form form .input_group .custom_radio_buttons label .option_radio:checked:before {
+  transform: scale(1, 1);
+}
+.custom_form form .input_group .custom_radio_buttons label .option_radio:after {
+  content: "";
+  position: absolute;
+  top: -0.25rem;
+  left: -0.125rem;
+  width: 0.9rem;
+  height: 0.9rem;
+  background: #fff;
+  border: 2px solid #d6d6d6;
+  border-radius: 50%;
+}
+
+.delete_btn {
+  background: red;
+}
+
+@media screen and (width >= 726px) {
+  .custom_form .row_input_group,
+  .custom_form .row_input_group_3 {
+    display: grid;
+    gap: 0 1em;
+  }
+  .custom_form .row_input_group {
+    grid-template-columns: 1fr 1fr;
+  }
+  .custom_form .row_input_group_3 {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
 footer {
-  padding: 16px 0 0;
   background: #222831;
-  color: #eeeeee;
+  padding: 16px 0 0;
 }
-footer .container a {
+footer * {
+  color: #eee;
+}
+footer .container section {
+  margin: 0 0 1.5em;
+}
+footer .container section a {
   text-decoration: none;
-  color: #eeeeee;
-}
-footer .container div {
-  margin: 0 0 1em;
 }
 footer .container .branding .image {
-  width: 100px;
   height: 100px;
-  margin: 0 auto 0.5em;
-  padding: 8px;
+  width: 100px;
 }
 footer .container .branding .image img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
-footer .container .branding h1 {
-  font-size: 1.25em;
-  text-transform: uppercase;
-  margin: 0.5em 0;
+footer .container .branding .app_name {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: 0.2em 0;
 }
 footer .container .links {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: 0.5em;
 }
-footer .container .socials a img {
+footer .container .contacts p {
+  margin: 0.2em 0;
+}
+footer .container .contacts .socials {
+  margin: 0.6em 0 0;
+}
+footer .container .contacts .socials img {
   width: 20px;
-  margin-right: 10px;
+  margin-right: 0.5em;
 }
 footer .copyright {
-  text-align: center;
   border-top: 1px solid grey;
+  text-align: center;
   padding: 8px;
 }
 
@@ -318,8 +451,8 @@ footer .copyright {
   footer .container .branding {
     text-align: center;
   }
-  footer .container .links {
-    gap: 0.2em;
+  footer .container .branding .image {
+    margin: auto;
   }
 }
 .alert {
@@ -340,161 +473,33 @@ footer .copyright {
 }
 
 .alert-danger {
-  background: rgb(235, 4, 4);
+  background: red;
 }
 
 .alert-success {
-  background: rgb(2, 168, 29);
+  background: green;
 }
 
 .alert-status {
-  background: rgb(194, 128, 5);
+  background: #c28005;
 }
 
 .alert-warning {
-  background: rgb(194, 128, 5);
+  background: #c28005;
 }
 
 .inline_alert {
   margin: 0.1em 0 0;
   font-weight: bold;
-  color: rgb(235, 4, 4);
+  color: red;
 }
 
 .inline_alert_success {
   padding: 0.5em;
   margin: 0.5em 0;
-  color: rgb(2, 168, 29);
+  color: green;
 }
 
-aside {
-  position: fixed;
-  border-right: 1px solid grey;
-  height: 100%;
-  padding: 4px 8px;
-  text-align: center;
-}
-aside i {
-  font-size: 1.5em;
-}
-aside a {
-  text-decoration: none;
-  color: #000;
-}
-aside .active {
-  background: #000;
-  border-radius: 8px;
-}
-aside .active a {
-  color: #fff;
-}
-aside .brand h1,
-aside .text {
-  display: none;
-}
-@media screen and (width >= 726px) {
-  aside .brand h1,
-  aside .text {
-    display: block;
-  }
-}
-aside .brand a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.2em;
-}
-aside .brand a img {
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-}
-aside .brand a h1 {
-  font-size: 1em;
-}
-aside ul {
-  list-style: none;
-  margin: 0.8em 0 0;
-}
-aside ul li {
-  padding: 4px;
-}
-aside .footer {
-  position: absolute;
-  bottom: 2em;
-}
-aside .footer .profile img {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-}
-aside .footer .logout {
-  margin: 0.5em 0 0;
-}
-aside .footer .logout form button {
-  background: none;
-  padding: unset;
-}
-aside .footer .logout form button i {
-  color: red;
-}
-
-@media screen and (width >= 726px) {
-  aside {
-    text-align: left;
-  }
-  aside i {
-    font-size: 0.95em;
-  }
-  aside ul {
-    margin: 2em 0;
-  }
-  aside ul li {
-    border-bottom: 1px solid #ccc;
-  }
-  aside ul li a {
-    display: grid;
-    grid-template-columns: 25px auto;
-    align-items: center;
-  }
-  aside .footer {
-    left: 0;
-    width: 100%;
-    padding: 0 0 0 8px;
-  }
-  aside .footer .profile,
-  aside .footer .logout {
-    display: flex;
-    align-items: center;
-  }
-  aside .footer .profile {
-    gap: 0.3em;
-  }
-  aside .footer .profile img {
-    width: 35px;
-    height: 35px;
-    border: 1px solid green;
-    padding: 2px;
-  }
-  aside .footer .profile span {
-    font-size: 0.8em;
-  }
-  aside .footer .logout {
-    justify-content: center;
-  }
-  aside .footer .logout form button {
-    display: flex;
-    align-items: center;
-    gap: 0.2em;
-    background-color: red;
-    color: #fff;
-    border-radius: 4px;
-    padding: 6px 12px;
-  }
-  aside .footer .logout form button i {
-    color: #fff;
-  }
-}
 .Contact .container {
   display: grid;
   grid-template-columns: 1fr;
@@ -506,9 +511,18 @@ aside .footer .logout form button i {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+.Contact .container .text h1 {
+  font-size: 3em;
+}
+@media screen and (width >= 726px) {
+  .Contact .container .text h1 {
+    font-size: 4.5em;
+  }
+}
 .Contact .container .text p {
   font-size: 1.25em;
-  color: rgb(53, 53, 53);
+  color: #2b2b2b;
+  margin: 0.8em 0 0;
 }
 @media screen and (width >= 726px) {
   .Contact .container .text p {
@@ -518,15 +532,13 @@ aside .footer .logout form button i {
 .Contact .container .text p span {
   display: grid;
 }
-.Contact .container .text .hours {
-  margin: 0.8em 0 0;
-}
 
 .Admin .Contact .strikethrough {
   text-decoration: line-through;
 }
-.Admin .Contact .edit_comment {
-  border: 1px solid #d1d0d0;
+.Admin .Contact .edit_comment .header {
+  display: grid;
+  justify-content: center;
 }
 .Admin .Contact .edit_comment .comment {
   background: #dcfcfa;
@@ -541,73 +553,116 @@ aside .footer .logout form button i {
 }
 @media screen and (width >= 726px) {
   .Admin .Contact .edit_comment {
-    width: 60%;
+    width: 60% !important;
     margin: auto;
   }
 }
 
-.Authentication {
+.Authentication .Login,
+.Authentication .Signup {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 90vh;
+  height: 90dvh;
 }
-.Authentication .container .header {
-  text-align: center;
-  margin: 0 0 1em;
+.Authentication .Login p,
+.Authentication .Signup p {
+  margin: 0.5em 0;
 }
-.Authentication .container .header img {
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-}
-.Authentication .verify_email {
-  text-align: center;
-}
-
-.profile_update {
-  background: #f5f5f5;
-}
-.profile_update .page_header,
-.profile_update .section {
-  background: #fff;
-}
-.profile_update .page_header {
+.Authentication .Profile_update .page_header {
   margin: 0 0 1em;
   padding: 1.5em 5%;
 }
-.profile_update h1,
-.profile_update h2 {
+.Authentication .Profile_update h1,
+.Authentication .Profile_update h2 {
   font-size: 1.2em;
 }
-.profile_update h2 {
+.Authentication .Profile_update h2 {
   margin: 0 0 0.3em;
 }
-.profile_update .section {
+.Authentication .Profile_update .section {
   padding: 1.4em 3%;
   border-radius: 8px;
   margin: 0 auto 1em;
 }
-.profile_update .section .header {
+.Authentication .Profile_update .section .header {
   margin: 0 0 1em;
+}
+.Authentication .Verify_email .header,
+.Authentication .Forgot_password .header,
+.Authentication .Reset_password .header {
+  text-align: center;
+  margin: 3em auto 2em;
+}
+.Authentication .Verify_email .header p,
+.Authentication .Forgot_password .header p,
+.Authentication .Reset_password .header p {
+  line-height: 1.3;
+}
+.Authentication .Verify_email form,
+.Authentication .Forgot_password form,
+.Authentication .Reset_password form {
+  margin: 2em 0;
+}
+.Authentication .Verify_email {
+  text-align: center;
 }
 
 @media screen and (width >= 726px) {
-  .Authentication .login,
-  .Authentication .verify_email,
-  .Authentication .forgot_password {
-    width: 40%;
-  }
-  .Authentication .signup {
+  .Verify_email,
+  .Forgot_password,
+  .Reset_password {
     width: 50%;
-  }
-  .profile_update .section {
-    width: 95%;
-  }
-  .profile_update .section .body .custom_form {
-    width: 50%;
+    margin: auto;
   }
 }
+.Admin_dashboard .Hero p {
+  font-size: 1.2em;
+  font-weight: bold;
+}
+.Admin_dashboard .Stats {
+  margin: 1em 0;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5em;
+}
+@media screen and (width >= 726px) {
+  .Admin_dashboard .Stats {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+.Admin_dashboard .Stats .stat {
+  border-radius: 8px;
+  padding: 6px 12px;
+  display: grid;
+  gap: 0.8em;
+  align-items: center;
+  grid-template-columns: 25px auto;
+  background: #dedefd;
+}
+.Admin_dashboard .Stats .stat .icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  padding: 4px;
+  border-radius: 50%;
+  background: #7e7ef7;
+}
+.Admin_dashboard .Stats .stat .text {
+  display: grid;
+  gap: 0.2em;
+}
+.Admin_dashboard .Stats .stat .text a {
+  font-size: 0.85em;
+  color: #000;
+  text-decoration: none;
+}
+.Admin_dashboard .Stats .stat .text span {
+  font-size: 1.2em;
+}
+
 .UserDashboard .container h1 {
   font-size: 1.35em;
 }
@@ -618,51 +673,6 @@ aside .footer .logout form button i {
   gap: 1em;
 }
 
-.Admin .Dashboard .hero h1 {
-  font-size: 1.2em;
-}
-.Admin .Dashboard .stats {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.5em;
-  margin: 1em 0;
-}
-@media screen and (width >= 726px) {
-  .Admin .Dashboard .stats {
-    grid-template-columns: repeat(6, 1fr);
-  }
-}
-.Admin .Dashboard .stats .stat {
-  background: rgb(222, 222, 253);
-  padding: 8px 16px;
-  border-radius: 8px;
-  display: grid;
-  grid-template-columns: 30px auto;
-  align-items: center;
-  gap: 0.8em;
-}
-.Admin .Dashboard .stats .stat .icon {
-  background: #a3a2fa;
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  padding: 4px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.Admin .Dashboard .stats .stat .text {
-  display: grid;
-}
-.Admin .Dashboard .stats .stat .text a {
-  text-decoration: none;
-  color: #000;
-  font-size: 0.9em;
-}
-.Admin .Dashboard .stats .stat .text span {
-  font-size: 1.2em;
-}
-
 .Admin aside {
   width: 15%;
 }
@@ -671,22 +681,27 @@ aside .footer .logout form button i {
   padding: 4px 15px;
 }
 .Admin .admin_content .header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 0 0 0.5em;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5em;
+  margin: 0 0 0.8em;
 }
-.Admin .admin_content .header h1 {
-  font-size: 1.15em;
+@media screen and (width >= 726px) {
+  .Admin .admin_content .header {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
-.Admin .admin_content .header h1 span {
+.Admin .admin_content .header p {
+  font-size: 1.1em;
+  color: #2b2b2b;
+}
+.Admin .admin_content .header p span {
   font-size: 0.85em;
-  color: grey;
 }
 .Admin .admin_content .header input {
-  border: 1px solid rgb(41, 41, 41);
+  padding: 6px 12px;
   border-radius: 32px;
-  padding: 4px 16px;
+  border: 1px solid grey;
 }
 .Admin .admin_content .header .header_btn {
   margin: 0;
@@ -698,73 +713,66 @@ aside .footer .logout form button i {
   padding: 4px 8px;
   border-radius: 4px;
 }
-.Admin .admin_content .body table {
+.Admin .admin_content .body .table {
   width: 100%;
-  border-collapse: collapse;
   border-spacing: 0;
+  border-collapse: collapse;
 }
-.Admin .admin_content .body table thead {
-  background: #000;
+.Admin .admin_content .body .table thead {
   color: #fff;
+  background: #000;
 }
-.Admin .admin_content .body table thead th {
-  text-align: left;
-  padding: 6px 6px;
+.Admin .admin_content .body .table thead th {
+  padding: 6px;
   font-size: 0.9em;
+  text-align: left;
 }
-.Admin .admin_content .body table thead th:last-of-type {
-  text-align: center;
+.Admin .admin_content .body .table thead th:last-of-type {
   border-radius: 0 8px 0 0;
 }
-.Admin .admin_content .body table thead th:first-of-type {
+.Admin .admin_content .body .table thead th:first-of-type {
   border-radius: 8px 0 0 0;
 }
-.Admin .admin_content .body table tbody tr {
-  border-bottom: 1px solid rgb(211, 211, 211);
+.Admin .admin_content .body .table tbody tr {
+  border-bottom: 1px solid silver;
 }
-.Admin .admin_content .body table tbody tr:nth-of-type(odd) {
-  background: rgb(245, 245, 245);
+.Admin .admin_content .body .table tbody tr td {
+  padding: 2px 6px;
 }
-.Admin .admin_content .body table tbody tr td {
-  padding: 4px 6px;
-}
-.Admin .admin_content .body table tbody tr td a {
-  text-decoration: none;
+.Admin .admin_content .body .table tbody tr td a {
   color: blue;
+  text-decoration: none;
 }
-.Admin .admin_content .body table tbody tr td .td_span {
+.Admin .admin_content .body .table tbody tr td .td_span {
+  padding: 2px 6px;
   font-size: 0.65em;
-  background: rgb(193, 193, 255);
-  padding: 2px 8px;
+  font-weight: bold;
   border-radius: 32px;
+  background: #dedefd;
 }
-.Admin .admin_content .body table tbody tr .actions {
+.Admin .admin_content .body .table tbody tr .actions {
   display: flex;
   justify-content: center;
   gap: 0 2em;
 }
-.Admin .admin_content .body table tbody tr .actions .action i {
-  font-size: 1em;
-  font-weight: bold;
+.Admin .admin_content .custom_form {
+  width: 88%;
+  margin: auto;
 }
-.Admin .admin_content .body table tbody tr .actions .action .update {
-  color: green;
+.Admin .admin_content .custom_form form {
+  padding: 15px;
+  border: 1px solid #b3b3b3;
+  border-radius: 0 0 6px 6px;
 }
-.Admin .admin_content .body table tbody tr .actions .action .delete {
-  color: red;
+.Admin .admin_content .custom_form form:not(:first-of-type) {
+  margin: 1.5em 0 0;
+  border-radius: 6px;
 }
-.Admin .admin_content .body table tbody tr .actions .action form button {
-  background: none;
-  padding: 0;
-  cursor: pointer;
+.Admin .admin_content .delete_btn {
+  margin: 0.5em 0 0;
 }
 
 @media screen and (width <= 726px) {
-  .Admin .admin_content .header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5em;
-  }
   .Admin .admin_content .body {
     width: 100%;
     overflow: scroll;

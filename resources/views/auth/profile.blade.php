@@ -1,5 +1,5 @@
-<x-general-layout>
-    <div class="profile_update">
+<x-general-layout class="Authentication">
+    <div class="Profile_update">
         @include('partials.messages')
 
         <div class="container page_header">
@@ -101,7 +101,7 @@
                         <span class="inline_alert">{{ $errors->userDeletion->first('password') }}</span>
                     </div>
 
-                    <button id="deleteAccountBtn" type="button" onclick="checkPasswordAndDelete()" class="btn_danger" style="display: none;">Delete Account</button>
+                    <button id="deleteAccountBtn" type="button" onclick="checkPasswordAndDelete()" class="delete_btn" style="display: none;">Delete Account</button>
                 </form>
             </div>
         </div>
