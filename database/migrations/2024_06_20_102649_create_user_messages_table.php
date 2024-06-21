@@ -17,8 +17,6 @@ return new class extends Migration
             $table->string('email');
             $table->string('phone_number');
             $table->string('message', 2000);
-            $table->boolean('is_visible')->default(1);
-            $table->unsignedTinyInteger('ordering')->default(200);
             $table->timestamps();
         });
     }

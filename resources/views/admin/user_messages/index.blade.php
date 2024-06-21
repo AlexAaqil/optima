@@ -13,6 +13,7 @@
                     <th>Email</th>
                     <th>Phone Number</th>
                     <th>Message</th>
+                    <th></th>
                 </tr>
             </thead>
 
@@ -22,7 +23,7 @@
                     @foreach($user_messages as $user_message)
                         <tr class="searchable {{ $user_message->is_visible == 0 ? 'strikethrough' : '' }}">
                             <td class="center">
-                                <a href="{{ route('user-messages.edit', ['user_message' => $user_message->id]) }}">
+                                <a href="{{ route('user-messages.show', ['user_message' => $user_message->id]) }}">
                                     {{ $id++ }}
                                 </a>
                             </td>
@@ -32,6 +33,7 @@
                             <td>
                                 {{ Illuminate\Support\Str::limit($user_message->message, 35, ' ...') }}
                             </td>
+                            <td>{{ $user_message->created_at->diffForHumans() }}</td>
                         </tr>
                     @endforeach
                 @else

@@ -14,7 +14,5 @@ class UserMessage extends Model
         'email',
         'phone_number',
         'message',
-        'is_visible',
-        'ordering',
     ];
 }

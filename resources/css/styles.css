@@ -29,10 +29,6 @@ img {
      object-fit: cover;
 }
 
-button {
-  cursor: pointer;
-}
-
 aside {
   height: 100%;
   position: fixed;
@@ -279,13 +275,20 @@ form textarea {
   font-size: 1em;
   width: 100%;
 }
-form button {
+
+form button,
+a.btn {
   padding: 8px 12px;
   background: #000;
   color: #fff;
   border: none;
   border-radius: 4px;
   font-size: 1em;
+  cursor: pointer;
+}
+
+a.btn {
+  text-decoration: none;
 }
 
 .action i {
@@ -536,11 +539,11 @@ footer .copyright {
 .Admin .Contact .strikethrough {
   text-decoration: line-through;
 }
-.Admin .Contact .edit_comment .header {
-  display: grid;
-  justify-content: center;
+.Admin .Contact .show_user_message .form_details {
+  border: 1px solid #b3b3b3;
+  padding: 15px;
 }
-.Admin .Contact .edit_comment .comment {
+.Admin .Contact .show_user_message .comment {
   background: #dcfcfa;
   width: 75%;
   margin: 0.5em 0 2em;
@@ -548,11 +551,11 @@ footer .copyright {
   border-radius: 8px 8px 32px 8px;
   box-shadow: 2px 2px 6px #cacaca;
 }
-.Admin .Contact .edit_comment form {
-  padding: 10px 15px;
+.Admin .Contact .show_user_message form {
+  margin: 3em 0;
 }
 @media screen and (width >= 726px) {
-  .Admin .Contact .edit_comment {
+  .Admin .Contact .show_user_message {
     width: 60% !important;
     margin: auto;
   }
@@ -765,7 +768,7 @@ footer .copyright {
   border-radius: 0 0 6px 6px;
 }
 .Admin .admin_content .custom_form form:not(:first-of-type) {
-  margin: 1.5em 0 0;
+  margin: 2.5em 0 0;
   border-radius: 6px;
 }
 .Admin .admin_content .delete_btn {

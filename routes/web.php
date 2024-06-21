@@ -34,5 +34,5 @@ Route::middleware(['auth', 'verified', 'admin'])
     Route::patch('/users/{user}', [UserController::class, 'update'])->name('user.update');
     Route::delete('/users/{user}', [UserController::class, 'destroy'])->name('users.destroy');
 
-    Route::resource('user-messages', UserMessageController::class)->only('index', 'edit', 'update', 'destroy');
+    Route::resource('user-messages', UserMessageController::class)->only('index', 'show', 'destroy');
 });

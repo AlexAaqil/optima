@@ -27,12 +27,12 @@
             text-decoration: line-through;
         }
     
-        .edit_comment {
-            .header {
-                display: grid;
-                justify-content: center;
+        .show_user_message {
+            .form_details {
+                border: 1px solid lighten($faded, 20);
+                padding: 15px;
             }
-            
+
             .comment {
                 background: #dcfcfa;
                 width: 75%;
@@ -43,14 +43,14 @@
             }
 
             form {
-                padding: 10px 15px;
+                margin: 3em 0;
             }
         }
     }
     
     @media screen and (width >= 726px) {
         .Contact {
-            .edit_comment {
+            .show_user_message {
                 width: 60% !important;
                 margin: auto;
             }

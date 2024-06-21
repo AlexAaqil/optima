@@ -28,21 +28,9 @@ class UserMessageController extends Controller
         return redirect()->back()->with('success', ['message' => 'Your message has been sent']);
     }
 
-    public function edit(UserMessage $user_message)
+    public function show(UserMessage $user_message)
     {
-        return view('admin.user_messages.edit', compact('user_message'));
-    }
-
-    public function update(Request $request, UserMessage $user_message)
-    {
-        $validated = $request->validate([
-            'is_visible' => 'required|numeric',
-            'ordering' => 'required|numeric',
-        ]);
-
-        $user_message->update($validated);
-
-        return redirect()->route('user-messages.index')->with('success', ['message' => 'User Message has been updated']);
+        return view('admin.user_messages.show', compact('user_message'));
     }
 
     public function destroy(UserMessage $user_message)
