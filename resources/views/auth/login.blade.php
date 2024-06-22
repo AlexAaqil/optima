@@ -7,9 +7,7 @@
                 <div class="input_group">
                     <label for="email">Email Address</label>
                     <input type="email" name="email" id="email" placeholder="Email Address" value="{{ old('email') }}">
-                    <span class="inline_alert">
-                        {{ $errors->first('email') }}
-                    </span>
+                    <span class="inline_alert">{{ $errors->first('email') }}</span>
                 </div>
         
                 <div class="input_group">
