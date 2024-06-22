@@ -33,7 +33,7 @@
                             <td>
                                 {{ Illuminate\Support\Str::limit($user_message->message, 35, ' ...') }}
                             </td>
-                            <td>{{ $user_message->created_at->diffForHumans() }}</td>
+                            <td>{{ formatted_date($user_message->created_at) }}</td>
                         </tr>
                     @endforeach
                 @else

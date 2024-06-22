@@ -543,7 +543,11 @@ footer .copyright {
   border: 1px solid #b3b3b3;
   padding: 15px;
 }
-.Admin .Contact .show_user_message .comment {
+.Admin .Contact .show_user_message .user_message_details .time {
+  font-size: 0.75em;
+  text-align: center;
+}
+.Admin .Contact .show_user_message .user_message_details .user_message {
   background: #dcfcfa;
   width: 75%;
   margin: 0.5em 0 2em;

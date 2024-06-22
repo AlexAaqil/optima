@@ -10,8 +10,9 @@
         </header>
 
         <div class="form_details">
-            <div class="comment">
-                <p>{{ $user_message->message }}</p>
+            <div class="user_message_details">
+                <p class="time">{{ formatted_date($user_message->created_at) }}</p>
+                <p class="user_message">{{ $user_message->message }}</p>
             </div>
 
             <a href="mailto:{{ $user_message->email }}" class="btn">Email this user</a>

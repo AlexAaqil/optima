@@ -33,13 +33,20 @@
                 padding: 15px;
             }
 
-            .comment {
-                background: #dcfcfa;
-                width: 75%;
-                margin: 0.5em 0 2em;
-                padding: 8px 15px;
-                border-radius: 8px 8px 32px 8px;
-                box-shadow: 2px 2px 6px #cacaca;
+            .user_message_details {
+                .time {
+                    font-size: 0.75em;
+                    text-align: center;
+                }
+
+                .user_message {
+                    background: #dcfcfa;
+                    width: 75%;
+                    margin: 0.5em 0 2em;
+                    padding: 8px 15px;
+                    border-radius: 8px 8px 32px 8px;
+                    box-shadow: 2px 2px 6px #cacaca;
+                }
             }
 
             form {
