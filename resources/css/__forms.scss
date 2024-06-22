@@ -35,6 +35,11 @@ a.btn {
     text-decoration: none;
 }
 
+.delete_btn,
+.btn_danger {
+    background: $danger;
+}
+
 .action {
     i {
         font-size: 1em;
@@ -154,10 +159,6 @@ a.btn {
             }
         }
     }
-}
-
-.delete_btn {
-    background: $danger;
 }
 
 @media screen and (width >= 726px) {

@@ -4,7 +4,7 @@
         
         <div class="custom_form">
             <div class="button_wrapper">
-                <a href="{{ route('profile.edit') }}" class="btn_link">Edit Profile</a>
+                <a href="{{ route('profile.edit') }}" class="btn">Edit Profile</a>
             </div>
 
             <form action="{{ route('logout') }}" method="post">
