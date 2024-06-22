@@ -11,7 +11,6 @@
                 <th>Name</th>
                 <th>Email</th>
                 <th>Phone Number</th>
-                <th class="center">Action</th>
             </thead>
 
             <tbody>
