@@ -8,7 +8,7 @@
     <div class="body">
         <div class="blog_categories">
             @foreach($categories as $category)
-                <span><a href="#">{{ $category->title }}</a></span>
+                <span><a href="{{ route('blog-categories.edit', $category->id) }}">{{ $category->title }}</a></span>
             @endforeach
         </div>
 

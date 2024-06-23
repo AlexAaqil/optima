@@ -38,7 +38,7 @@ Route::middleware(['auth', 'verified', 'admin'])
 
     Route::resource('user-messages', UserMessageController::class)->only('index', 'show', 'destroy');
 
-    Route::resource('/blog-categories', BlogCategoryController::class)->except('show');
+    Route::resource('/blog-categories', BlogCategoryController::class)->only('store', 'edit', 'update', 'destroy');
 
     Route::resource('/blogs', BlogController::class)->except('show');
     Route::post('/blogs/sort-lessons', [BlogController::class, 'sort_blogs'])->name('blogs.sort');

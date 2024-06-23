@@ -8,18 +8,6 @@ use Illuminate\Support\Str;
 
 class BlogCategoryController extends Controller
 {
-    public function index()
-    {
-        $categories = BlogCategory::latest()->get();
-
-        return view('admin.blog_categories.index', compact('categories'));
-    }
-
-    public function create()
-    {
-        return view('admin.blog_categories.create');
-    }
-
     public function store(Request $request)
     {
         $validated = $request->validate([
@@ -36,7 +24,7 @@ class BlogCategoryController extends Controller
 
     public function edit(BlogCategory $blog_category)
     {
-        return view('admin.blog_categories.edit', compact('blog_category'));
+        return view('admin.blogs.edit_category', compact('blog_category'));
     }
 
 
@@ -51,13 +39,13 @@ class BlogCategoryController extends Controller
 
         $blog_category->update($validated);
 
-        return redirect()->route('blog-categories.index')->with('success', ['message' => 'Blog category has been updated.']);
+        return redirect()->route('blogs.index')->with('success', ['message' => 'Blog category has been updated.']);
     }
 
     public function destroy(BlogCategory $blog_category)
     {
         $blog_category->delete();
 
-        return redirect()->route('blog-categories.index')->with('success', ['message' => 'Blog category has been deleted.']);
+        return redirect()->route('blogs.index')->with('success', ['message' => 'Blog category has been deleted.']);
     }
 }

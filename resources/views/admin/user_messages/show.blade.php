@@ -31,6 +31,6 @@
     </div>
 
     <x-slot name="javascript">
-        <script src="{{ asset('assets/js/sweetalert.js') }}"></script>
+        <x-sweetalert />
     </x-slot>
 </x-admin-layout>
