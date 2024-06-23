@@ -62,9 +62,21 @@
 
             <button type="submit">Update</button>
         </form>
+
+        <form id="deleteForm_{{ $blog->id }}" action="{{ route('blogs.destroy', $blog->id) }}" method="post">
+            @csrf
+            @method('DELETE')
+
+            <p>Delete this Blog</p>
+            <button type="button" class="delete_btn" onclick="deleteItem({{ $blog->id }}, 'blog');">
+                <i class="fas fa-trash-alt delete"></i>
+                <span>Delete</span>
+            </button>
+        </form>
     </div>
 
     <x-slot name="javascript">
         <x-text-editor />
+        <x-sweetalert />
     </x-slot>
 </x-admin-layout>
