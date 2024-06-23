@@ -11,6 +11,7 @@
                 ['route' => 'about', 'text' => 'About'],
                 ['route' => 'services', 'text' => 'Services'],
                 ['route' => 'contact', 'text' => 'Contact'],
+                ['route' => 'users.blogs', 'text' => 'Blogs'],
             ];
         @endphp
 

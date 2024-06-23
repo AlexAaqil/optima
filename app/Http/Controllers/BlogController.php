@@ -139,9 +139,10 @@ class BlogController extends Controller
 
     public function users_blogs(Blog $blog)
     {
-        $blogs = Blog::latest()->paginate(6);
+        $blogs = Blog::where('is_published', 1)->orderBy('ordering')->paginate(6);
+        $categories = BlogCategory::orderBy('title')->get();
 
-        return view('blogs', compact('blogs'));
+        return view('blogs.index', compact('blogs', 'categories'));
     }
 
     public function sort_blogs(Request $request)

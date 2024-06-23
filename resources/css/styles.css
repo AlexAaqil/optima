@@ -39,7 +39,7 @@ img {
   display: grid;
   grid-template-columns: 1fr;
   gap: 0.5em;
-  gap: 1em;
+  gap: 1.5em;
 }
 @media screen and (width >= 726px) {
   .cards {
@@ -615,6 +615,11 @@ footer .copyright {
   }
 }
 
+.Admin .Blogs .custom_form .input_group img {
+  height: 100px;
+  width: 100px;
+}
+
 .Blogs .blog_categories {
   margin: 0 0 0.8em;
 }
@@ -628,11 +633,86 @@ footer .copyright {
   text-decoration: none;
   color: #000;
 }
-.Blogs .custom_form .input_group img {
-  height: 100px;
-  width: 100px;
+.Blogs .Hero {
+  background: #e1e1e1;
+}
+.Blogs .Hero .container h1 {
+  font-size: 1.4em;
+  text-transform: uppercase;
+  margin: 0.5em 0 0;
+}
+@media screen and (width >= 726px) {
+  .Blogs .Hero .container h1 {
+    font-size: 3em;
+  }
+}
+.Blogs .Hero .container .categories_wrapper {
+  margin: 0.5em 0;
+}
+.Blogs .Hero .container .categories_wrapper .title {
+  font-weight: bold;
+}
+.Blogs .Hero .container .categories_wrapper .categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3em;
+}
+.Blogs .Hero .container .categories_wrapper .categories * {
+  color: #eee;
+}
+.Blogs .Hero .container .categories_wrapper .categories .category {
+  background: #222831;
+  border-radius: 32px;
+  padding: 4px 12px;
+}
+.Blogs .Hero .container .categories_wrapper .categories .category span {
+  text-transform: capitalize;
+  font-size: 0.9em;
+  flex-grow: 1;
+}
+.Blogs .Hero .container .categories_wrapper .categories .category span:not(:first-of-type) {
+  font-size: 0.75em;
+}
+.Blogs .Hero .container .categories_wrapper .categories .category a {
+  text-decoration: none;
+}
+.Blogs .blogs {
+  margin: 2em 0;
+}
+.Blogs .blogs .container .pagination {
+  margin: 3em 0;
+  text-align: center;
+}
+.Blogs .blogs .container .pagination a {
+  text-decoration: none;
+  color: #000;
+}
+.Blogs .blogs .container .pagination .disabled {
+  color: grey;
+}
+.Blogs .blogs .container .pagination .pagination-links {
+  margin: 0 1em;
+}
+.Blogs .blogs .container .pagination .pagination-links a {
+  color: grey;
+}
+.Blogs .blogs .container .pagination .pagination-links .active {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #000;
 }
 
+@media screen and (width >= 726px) {
+  .Blogs .Hero {
+    height: 40dvh;
+  }
+  .Blogs .Hero .container .categories_wrapper {
+    margin: 2em 0;
+  }
+  .Blogs .Hero .container .categories_wrapper .categories {
+    margin: 0.5em 0;
+  }
+}
 .Authentication .Login,
 .Authentication .Signup {
   display: flex;
