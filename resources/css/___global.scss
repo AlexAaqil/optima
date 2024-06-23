@@ -35,11 +35,12 @@ img {
             
             .extra_details {
                 display: flex;
+                flex-wrap: wrap;
                 gap: 0.8em;
                 margin: 0 0 0.5em;
 
                 span {
-                    font-size: 0.85em;
+                    font-size: 0.8em;
                 }
             }
 
