@@ -1,0 +1,27 @@
+.Blogs {
+    .blog_categories {
+        margin: 0 0 0.8em;
+
+        span {
+            font-size: 0.9em;
+
+            &:not(:last-of-type) {
+                margin: 0 0.8em 0 0;
+            }
+
+            a {
+                text-decoration: none;
+                color: $dark_text;
+            }
+        }
+    }
+
+    .custom_form {
+        .input_group {
+            img {
+                height: 100px;
+                width: 100px;
+            }
+        }
+    }
+}

@@ -3,8 +3,8 @@ $theme_2: #393e46;
 $theme_3: #00adb5;
 $theme_4: #00fff5;
 
-$light_color: #eee;
-$dark_color: #000;
+$light_text: #eee;
+$dark_text: #000;
 $text_faded: #2b2b2b;
 
 $danger: red;
@@ -20,8 +20,14 @@ $primary_button: #000;
     text-align: center !important;
 }
 
+.published {
+    color: $success;
+    font-weight: bold;
+}
+
 .inactive,
-.unverified {
+.unverified,
+.draft {
     color: $danger;
 }
 
