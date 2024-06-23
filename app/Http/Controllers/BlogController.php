@@ -61,7 +61,7 @@ class BlogController extends Controller
     {
         $blog = Blog::where('slug', $slug)->firstOrFail();
 
-        return view('blog_details', compact('blog'));
+        return view('blogs.show', compact('blog'));
     }
 
     public function edit(Blog $blog)

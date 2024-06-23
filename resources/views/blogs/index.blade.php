@@ -32,11 +32,11 @@
 
                             <div class="text">
                                 <div class="extra_details">
-                                    <span>{{ $blog->category->title }}</span>
+                                    <span class="faded">{{ $blog->category->title }}</span>
                                 </div>
 
                                 <div class="details">
-                                    <a href="" class="title">{{ $blog->title }}</a>
+                                    <a href="{{ route('blogs.show', $blog->slug) }}" class="title">{{ $blog->title }}</a>
                                     <span class="content">{!! Illuminate\Support\Str::limit($blog->content, 65, '...') !!}</span>
                                 </div>
                             </div>

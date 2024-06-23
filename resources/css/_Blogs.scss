@@ -110,6 +110,30 @@
             }
         }
     }
+
+    .Details {
+        .container {
+            header {
+                h1 {
+                    @include font_size(1.2em, 2em);
+                    text-align: center;
+                    margin: 1em 0;
+                }
+
+                .image {
+                    height: 400px;
+                    img {
+                        border-radius: 8px;
+                    }
+                }
+            }
+        }
+
+        .details {
+            margin: 1em 0;
+            padding: 8px 12px;
+        }
+    }
 }
 
 @media screen and (width >= 726px) {

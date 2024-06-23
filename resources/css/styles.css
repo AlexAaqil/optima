@@ -7,6 +7,10 @@
   font-weight: bold;
 }
 
+.faded {
+  color: #4d4d4d;
+}
+
 .inactive,
 .unverified,
 .draft {
@@ -700,6 +704,26 @@ footer .copyright {
   font-size: 1.3em;
   font-weight: bold;
   color: #000;
+}
+.Blogs .Details .container header h1 {
+  font-size: 1.2em;
+  text-align: center;
+  margin: 1em 0;
+}
+@media screen and (width >= 726px) {
+  .Blogs .Details .container header h1 {
+    font-size: 2em;
+  }
+}
+.Blogs .Details .container header .image {
+  height: 400px;
+}
+.Blogs .Details .container header .image img {
+  border-radius: 8px;
+}
+.Blogs .Details .details {
+  margin: 1em 0;
+  padding: 8px 12px;
 }
 
 @media screen and (width >= 726px) {

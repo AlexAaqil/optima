@@ -15,6 +15,7 @@ Route::get('/services', [GeneralPagesController::class, 'services'])->name('serv
 Route::get('/contact', [GeneralPagesController::class, 'contact'])->name('contact');
 Route::post('/contact', [UserMessageController::class, 'store'])->name('user-messages.store');
 Route::get('/blogs', [BlogController::class, 'users_blogs'])->name('users.blogs');
+Route::get('/blogs/{slug}', [BlogController::class, 'show'])->name('blogs.show');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/home', [DashboardController::class, 'index'])->name('dashboard.index');
