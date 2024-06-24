@@ -29,7 +29,8 @@ $dashboard_background: #dedefd;
                 height: 28px;
                 padding: 4px;
                 border-radius: 50%;
-                background: darken($dashboard_background, $amount: 20);
+                background: darken($dashboard_background, $amount: 30);
+                color: $light_text;
             }
 
             .text {

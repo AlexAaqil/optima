@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\UserMessage;
+use App\Models\Blog;
 
 class DashboardController extends Controller
 {
@@ -34,10 +35,12 @@ class DashboardController extends Controller
     {
         $count_users = User::count();
         $count_user_messages = UserMessage::count();
+        $count_blogs = Blog::count();
 
         return view('admin.dashboard', compact(
             'count_users',
             'count_user_messages',
+            'count_blogs',
         ));
     }
 }
