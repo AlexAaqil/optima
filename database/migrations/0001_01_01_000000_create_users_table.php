@@ -16,11 +16,12 @@ return new class extends Migration
             $table->string('first_name');
             $table->string('last_name');
             $table->string('email')->unique();
-            $table->string('phone_number');
+            $table->string('phone_number')->nullable();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->unsignedTinyInteger('user_level')->default(1);
+            $table->unsignedTinyInteger('user_level')->default(2);
             $table->boolean('user_status')->default(1);
+            $table->string('image')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });

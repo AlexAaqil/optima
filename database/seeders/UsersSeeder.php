@@ -20,7 +20,7 @@ class UsersSeeder extends Seeder
                 "email" => "admin@gmail.com",
                 "phone_number" => "254746055487",
                 "password"=> Hash::make("@dmin"),
-                "user_level" => 2,
+                "user_level" => 0,
             ],
             [
                 "first_name" => "User",
