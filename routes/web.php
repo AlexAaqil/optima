@@ -17,7 +17,7 @@ Route::post('/contact', [UserMessageController::class, 'store'])->name('user-mes
 Route::get('/blogs', [BlogController::class, 'users_blogs'])->name('users.blogs');
 Route::get('/blogs/{slug}', [BlogController::class, 'show'])->name('blogs.show');
 
-Route::middleware(['auth', 'verified'])->group(function () {
+Route::middleware(['auth', 'verified', 'active'])->group(function () {
     Route::get('/home', [DashboardController::class, 'index'])->name('dashboard.index');
     Route::get('/dashboard', [DashboardController::class, 'dashboard'])->name('dashboard');
     
@@ -28,7 +28,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
 
 require __DIR__.'/auth.php';
 
-Route::middleware(['auth', 'verified', 'admin'])
+Route::middleware(['auth', 'verified', 'active', 'admin'])
 ->prefix('admin')
 ->group(function() {
     Route::get('/dashboard', [DashboardController::class, 'admin_dashboard'])->name('admin.dashboard');

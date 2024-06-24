@@ -38,7 +38,7 @@
 
                 <div class="input_group">
                     <label for="message">Message</label>
-                    <textarea name="message" id="message" cols="30" rows="7" placeholder="Enter your message">{{ old('message') }}</textarea>
+                    <textarea name="message" id="message" cols="30" rows="7" placeholder="Enter your message">{{ session('success') ? '' : request('message', old('message')) }}</textarea>
                     <span class="inline_alert">{{ $errors->first('message') }}</span>
                 </div>
 

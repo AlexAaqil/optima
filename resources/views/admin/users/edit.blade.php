@@ -33,12 +33,12 @@
                     <label for="user_level">User Level</label>
                     <div class="custom_radio_buttons">
                         <label>
-                            <input class="option_radio" type="radio" name="user_level" id="user_level_1" value="0" {{ ($user->user_level == 0) ? 'checked' : '' }}>
+                            <input class="option_radio" type="radio" name="user_level" id="user_level_1" value="1" {{ ($user->user_level == 1) ? 'checked' : '' }}>
                             <span>Admin</span>
                         </label>
 
                         <label>
-                            <input class="option_radio" type="radio" name="user_level" id="user_level_2" value="1" {{ ($user->user_level == 1) ? 'checked' : '' }}>
+                            <input class="option_radio" type="radio" name="user_level" id="user_level_2" value="2" {{ ($user->user_level == 2) ? 'checked' : '' }}>
                             <span>User</span>
                         </label>
                     </div>

@@ -55,6 +55,42 @@
     .Verify_email {
         text-align: center;
     }
+
+    .Account_suspended {
+        height: 60vh;
+        @include flex_center;
+
+        .container {
+            text-align: center;
+
+            .image {
+                span {
+                    font-size: 2.5em;
+                }
+            }
+    
+            .text {
+                margin: 0.8em 0 0;
+
+                p {
+                    &:first-of-type {
+                        @include font_size(1.2em, 2.5em);
+                        font-weight: bold;
+                        color: $danger;
+                    }
+                }
+
+                .button {
+                    margin: 1.8em 0;
+
+                    a {
+                        border-radius: 32px;
+                        padding: 12px 24px;
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media screen and (width >= 726px) {

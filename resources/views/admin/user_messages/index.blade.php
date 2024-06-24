@@ -11,7 +11,6 @@
                     <th class="center">ID</th>
                     <th>Name</th>
                     <th>Email</th>
-                    <th>Phone Number</th>
                     <th>Message</th>
                     <th></th>
                 </tr>
@@ -21,7 +20,7 @@
                 @if(count($user_messages) > 0)
                     @php $id = 1 @endphp
                     @foreach($user_messages as $user_message)
-                        <tr class="searchable {{ $user_message->is_visible == 0 ? 'strikethrough' : '' }}">
+                        <tr class="searchable">
                             <td class="center">
                                 <a href="{{ route('user-messages.show', ['user_message' => $user_message->id]) }}">
                                     {{ $id++ }}
@@ -29,9 +28,8 @@
                             </td>
                             <td>{{ $user_message->name }}</td>
                             <td>{{ $user_message->email }}</td>
-                            <td>{{ $user_message->phone_number }}</td>
                             <td>
-                                {{ Illuminate\Support\Str::limit($user_message->message, 35, ' ...') }}
+                                {{ Illuminate\Support\Str::limit($user_message->message, 80, ' ...') }}
                             </td>
                             <td>{{ formatted_date($user_message->created_at) }}</td>
                         </tr>

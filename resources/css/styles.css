@@ -787,6 +787,38 @@ footer .copyright {
 .Authentication .Verify_email {
   text-align: center;
 }
+.Authentication .Account_suspended {
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Authentication .Account_suspended .container {
+  text-align: center;
+}
+.Authentication .Account_suspended .container .image span {
+  font-size: 2.5em;
+}
+.Authentication .Account_suspended .container .text {
+  margin: 0.8em 0 0;
+}
+.Authentication .Account_suspended .container .text p:first-of-type {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: red;
+}
+@media screen and (width >= 726px) {
+  .Authentication .Account_suspended .container .text p:first-of-type {
+    font-size: 2.5em;
+  }
+}
+.Authentication .Account_suspended .container .text .button {
+  margin: 1.8em 0;
+}
+.Authentication .Account_suspended .container .text .button a {
+  border-radius: 32px;
+  padding: 12px 24px;
+}
 
 @media screen and (width >= 726px) {
   .Verify_email,
