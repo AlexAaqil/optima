@@ -7,9 +7,13 @@
 
     <div class="body">
         <div class="blog_categories">
-            @foreach($categories as $category)
-                <span><a href="{{ route('blog-categories.edit', $category->id) }}">{{ $category->title }}</a></span>
-            @endforeach
+            @if(count($categories))
+                @foreach($categories as $category)
+                    <span><a href="{{ route('blog-categories.edit', $category->id) }}">{{ $category->title }}</a></span>
+                @endforeach
+            @else
+                <span>No available blog categories</span>
+            @endif
         </div>
 
         @if(count($blogs) > 0)
