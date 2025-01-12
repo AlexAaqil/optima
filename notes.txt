@@ -6,8 +6,6 @@ TODOs
 
 admin - search functionality.
 users - edit functionality.
-navbar - solve error for pages without the burger menu.
-authentication - ensure only active users can login.
 
 
 
