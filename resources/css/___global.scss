@@ -2,17 +2,25 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: sans-serif, Roboto, 'Open Sans', 'Helvetica Neue';
+    font-family: 'Helvetica Neue', sans-serif, Roboto, 'Open Sans';
 }
 
 .container {
     padding: 10px 5%;
 }
 
+body {
+    background: rgb(250, 250, 242);
+}
+
 img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+a {
+    text-decoration: none;
 }
 
 .cards {
