@@ -3,24 +3,6 @@
         font-size: 1.2em;
     }
 
-    .Jumbotron {
-        @include flex_center;
-        height: 20dvh;
-        margin: unset !important;
-
-        .container {
-            text-align: center;
-            
-            .navigation {
-                margin: 0.4em 0;
-    
-                span {
-                    font-weight: bold;
-                }
-            }
-        }
-    }
-
     .Intro {
         p {
             margin: 0 0 0.4em;
@@ -43,14 +25,6 @@
                     font-size: 2.4em;
                 }
             }
-        }
-    }
-}
-
-@media screen and (width >=726px) {
-    .About_Page {
-        .Jumbotron {
-            height: 30dvh;
         }
     }
 }

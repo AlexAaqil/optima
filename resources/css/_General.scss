@@ -21,6 +21,24 @@
             }
         }
     }
+
+    .Jumbotron {
+        @include flex_center;
+        height: 20dvh;
+        margin: unset !important;
+
+        .container {
+            text-align: center;
+            
+            .navigation {
+                margin: 0.4em 0;
+    
+                span {
+                    font-weight: bold;
+                }
+            }
+        }
+    }
     
     .Team {
         .members {
@@ -70,6 +88,10 @@
 
 @media screen and (width >=726px) {
     .General {
+        .Jumbotron {
+            height: 30dvh;
+        }
+        
         .Team {
             .members {
                 grid-template-columns: 1fr 1fr;

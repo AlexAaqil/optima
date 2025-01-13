@@ -597,6 +597,22 @@ footer .copyright {
   font-size: 1.2em;
   box-shadow: 2px 2px 4px #2b2b2b;
 }
+.General .Jumbotron {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 20dvh;
+  margin: unset !important;
+}
+.General .Jumbotron .container {
+  text-align: center;
+}
+.General .Jumbotron .container .navigation {
+  margin: 0.4em 0;
+}
+.General .Jumbotron .container .navigation span {
+  font-weight: bold;
+}
 .General .Team .members {
   display: grid;
   gap: 1em;
@@ -639,6 +655,9 @@ footer .copyright {
 }
 
 @media screen and (width >= 726px) {
+  .General .Jumbotron {
+    height: 30dvh;
+  }
   .General .Team .members {
     grid-template-columns: 1fr 1fr;
   }
@@ -727,22 +746,6 @@ footer .copyright {
 .About_Page .title {
   font-size: 1.2em;
 }
-.About_Page .Jumbotron {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 20dvh;
-  margin: unset !important;
-}
-.About_Page .Jumbotron .container {
-  text-align: center;
-}
-.About_Page .Jumbotron .container .navigation {
-  margin: 0.4em 0;
-}
-.About_Page .Jumbotron .container .navigation span {
-  font-weight: bold;
-}
 .About_Page .Intro p {
   margin: 0 0 0.4em;
 }
@@ -771,9 +774,21 @@ footer .copyright {
   font-size: 2.4em;
 }
 
+.Services_Page .Services .container .services .service {
+  display: grid;
+  gap: 0.3em;
+  padding: 1.5em 0.2em;
+  border-bottom: 1px solid #e6e3e3;
+}
+.Services_Page .Services .container .services .service span:nth-of-type(2) {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
 @media screen and (width >= 726px) {
-  .About_Page .Jumbotron {
-    height: 30dvh;
+  .Services_Page .Services .container .services .service {
+    grid-template-columns: 5% 1fr 1fr;
+    gap: 2em;
   }
 }
 .Contact .container {
