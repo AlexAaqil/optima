@@ -1,27 +1,4 @@
 .Home_Page {
-    section {
-        &:not(:last-of-type) {
-            margin: 0 0 5em;
-        }
-
-        h2 {
-            font-size: 2em;
-            margin: 0 0 0.8em;
-            text-align: center;
-        }
-
-        .button {
-            margin: 3em 0 0;
-
-            a {
-                border-radius: 32px;
-                padding: 16px 28px;
-                font-size: 1.2em;
-                box-shadow: 2px 2px 4px $text_faded;
-            }
-        }
-    }
-
     .Hero {
         @include flex_center;
         height: 50dvh;
@@ -81,57 +58,12 @@
             }
         }
     }
-
-    .Team {
-        .members {
-            display: grid;
-            gap: 1em;
-            justify-items: center;
-
-            .member {
-                .image {
-                    width: 300px;
-                    height: 300px;
-
-                    img {
-                        border-radius: 8px;
-                    }
-                }
-
-                .text {
-                    text-align: center;
-                    
-                    .title {
-                        font-weight: bold;
-                        font-size: 1.2em;
-                        margin: 0.5em 0 0;
-                    }
-                }
-            }
-        }
-    }
-
-    .CTA {
-        background: $text_color;
-        padding: 5em 5%;
-        *{color: $light_text}
-
-        .title {
-            @include font_size(1.6em, 2em);
-            margin: 0 0 0.4em;
-        }
-
-        a {
-            background: $theme_1;
-            color: $text_color;
-        }
-    }
 }
 
 @media screen and (width >= 726px) {
     .Home_Page {
         .Hero {
-            height: 80dvh;
+            height: 90dvh;
 
             .text {
                 width: 80%;
@@ -164,33 +96,6 @@
                     gap: 2em;
                     align-items: flex-start;
                     align-content: flex-start;
-                }
-            }
-        }
-
-        .Team {
-            .members {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        .CTA {
-            .container {
-                .ctas {
-                    display: grid;
-                    grid-template-columns: 2fr 1fr;
-                    gap: 2em;
-                    align-items: center;
-
-                    .cta {
-                        &:last-of-type {
-                            text-align: center;
-                        }
-                    }
-
-                    .button {
-                        margin: unset;
-                    }
                 }
             }
         }

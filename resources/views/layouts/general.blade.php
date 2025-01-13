@@ -2,7 +2,7 @@
     @include('partials.navbar')
 
     
-    <main {{ $attributes->merge(['class' => '']) }}>
+    <main {{ $attributes->merge(['class' => 'General']) }}>
         @include('partials.messages')
         
         {{ $slot }}

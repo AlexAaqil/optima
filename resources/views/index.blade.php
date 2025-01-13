@@ -5,7 +5,7 @@
                 <h1>Empowering Businesses with Tailored Software Solutions</h1>
                 <p>We specialize in developing powerful software to help you streamline your operations, increase productivity and boost revenue.</p>
 
-                <div class="button">
+                <div class="button_link">
                     <a href="{{ route('contact') }}" class="btn_link">Get a Free Constulation</a>
                 </div>
             </div>
@@ -70,48 +70,7 @@
         </div>
     </section>  
 
-    <section class="Team">
-        <div class="container">
-            <h2>Meet the Team</h2>
-
-            <div class="members">
-                <div class="member">
-                    <div class="image">
-                        <img src="{{ asset('assets/images/charles-maina.jpg') }}" alt="Charles">
-                    </div>
-                    <div class="text">
-                        <p class="title">Charles Maina</p>
-                        <p>Founder, CEO</p>
-                    </div>
-                </div>
-
-                <div class="member">
-                    <div class="image">
-                        <img src="{{ asset('assets/images/alex-wambui.png') }}" alt="Alex">
-                    </div>
-                    <div class="text">
-                        <p class="title">Alex Wambui</p>
-                        <p>Co-Founder, CTO</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <x-the-team />
     
-    <section class="CTA">
-        <div class="container">
-            <div class="ctas">
-                <div class="cta">
-                    <p class="title">Ready to revolutionize your business?</p>
-                    <p>Request a quote or a demo of any of our apps to see how they can help you streamline your operations and boost revenue.</p>
-                </div>
-
-                <div class="cta">
-                    <div class="button">
-                        <a href="{{ route('contact') }}" class="btn_link">Request a Quote</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <x-cta />
 </x-general-layout>

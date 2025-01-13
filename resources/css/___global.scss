@@ -24,6 +24,10 @@ a {
     text-decoration: none;
 }
 
+.title {
+    font-weight: bold;
+}
+
 .cards {
     @include grid(3);
     gap: 1.5em;
