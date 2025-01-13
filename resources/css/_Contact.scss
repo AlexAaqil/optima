@@ -3,13 +3,20 @@
         @include grid(2);
         align-items: center;
 
+        form {
+            input,
+            textarea {
+                background: transparent;
+            }
+        }
+
         .text {
             h1 {
-                @include font_size(3em, 4.5em);
+                @include font_size(2.4em, 4.4em);
             }
 
             p {
-                @include font_size(1.25em, 2em);
+                @include font_size(1.04em, 1.6em);
                 color: $text_faded;
                 margin: 0.8em 0 0;
 

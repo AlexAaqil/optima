@@ -4,7 +4,12 @@
             <h1>Get in Touch</h1>
             
             <p>
-                <span>{{ config('globals.phone_number') }}</span>
+                <span>
+                    {{ config('globals.phone_number') }}
+                    @if (config('globals.phone_other'))
+                        / {{ config('globals.phone_other') }}
+                    @endif
+                </span>
                 <span>{{ config('globals.email') }}</span>
             </p>
 
