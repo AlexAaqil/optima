@@ -33,7 +33,8 @@
 }
 
 body {
-  background: rgb(250, 250, 242);
+  background: #ffd001;
+  color: #000;
 }
 
 img {
@@ -471,7 +472,7 @@ a.btn {
 }
 
 footer {
-  background: #222831;
+  background: #000;
   padding: 16px 0 0;
 }
 footer * {
@@ -575,8 +576,22 @@ footer .copyright {
   color: green;
 }
 
-.Home_Page section {
+.Home_Page section:not(:last-of-type) {
   margin: 0 0 5em;
+}
+.Home_Page section h2 {
+  font-size: 2em;
+  margin: 0 0 0.8em;
+  text-align: center;
+}
+.Home_Page section .button {
+  margin: 3em 0 0;
+}
+.Home_Page section .button a {
+  border-radius: 32px;
+  padding: 16px 28px;
+  font-size: 1.2em;
+  box-shadow: 2px 2px 4px #2b2b2b;
 }
 .Home_Page .Hero {
   display: flex;
@@ -584,50 +599,92 @@ footer .copyright {
   justify-content: center;
   height: 50dvh;
 }
-.Home_Page .Hero p {
+.Home_Page .Hero .text h1 {
+  font-size: 1.6em;
+}
+@media screen and (width >= 726px) {
+  .Home_Page .Hero .text h1 {
+    font-size: 3.2em;
+  }
+}
+.Home_Page .Hero .text p {
   margin: 1.2em auto;
-}
-.Home_Page .Hero .button {
-  margin: 3em 0 0;
-}
-.Home_Page .Hero .button a {
-  border-radius: 32px;
-  padding: 16px 28px;
-  font-size: 1.2em;
 }
 .Home_Page .Services .container .services .service {
   display: grid;
   gap: 0.3em;
   padding: 1.5em 0.2em;
-  border-bottom: 1px solid #cfcfcf;
+  border-bottom: 1px solid #e6e3e3;
 }
 .Home_Page .Services .container .services .service span:nth-of-type(2) {
   font-weight: bold;
   font-size: 1.2em;
 }
 .Home_Page .About_Us .container .abouts .about {
-  padding: 12px 8px;
+  padding: 16px 16px;
   display: grid;
-  border: 1px solid #cfcfcf;
+  border: 1px solid #000;
   margin: 0 0 1.5em;
   border-radius: 8px;
+  box-shadow: 2px 2px 4px #2b2b2b;
+}
+.Home_Page .About_Us .container .abouts .about:hover {
+  box-shadow: unset;
+  transition: all 0.2s ease-in-out;
 }
 .Home_Page .About_Us .container .abouts .about span:first-of-type {
   font-weight: bold;
   margin: 0 0 0.3em;
 }
+.Home_Page .Team .members {
+  display: grid;
+  gap: 1em;
+  justify-items: center;
+}
+.Home_Page .Team .members .member .image {
+  width: 300px;
+  height: 300px;
+}
+.Home_Page .Team .members .member .image img {
+  border-radius: 8px;
+}
+.Home_Page .Team .members .member .text {
+  text-align: center;
+}
+.Home_Page .Team .members .member .text .title {
+  font-weight: bold;
+  font-size: 1.2em;
+  margin: 0.5em 0 0;
+}
+.Home_Page .CTA {
+  background: #000;
+  padding: 5em 5%;
+}
+.Home_Page .CTA * {
+  color: #eee;
+}
+.Home_Page .CTA .title {
+  font-size: 1.6em;
+  margin: 0 0 0.4em;
+}
+@media screen and (width >= 726px) {
+  .Home_Page .CTA .title {
+    font-size: 2em;
+  }
+}
+.Home_Page .CTA a {
+  background: #ffd001;
+  color: #000;
+}
 
 @media screen and (width >= 726px) {
   .Home_Page .Hero {
-    height: 70dvh;
+    height: 80dvh;
   }
   .Home_Page .Hero .text {
     width: 80%;
     margin: auto;
     text-align: center;
-  }
-  .Home_Page .Hero .text h1 {
-    font-size: 3.2em;
   }
   .Home_Page .Hero .text p {
     font-size: 1.6em;
@@ -643,6 +700,21 @@ footer .copyright {
     gap: 2em;
     align-items: flex-start;
     align-content: flex-start;
+  }
+  .Home_Page .Team .members {
+    grid-template-columns: 1fr 1fr;
+  }
+  .Home_Page .CTA .container .ctas {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2em;
+    align-items: center;
+  }
+  .Home_Page .CTA .container .ctas .cta:last-of-type {
+    text-align: center;
+  }
+  .Home_Page .CTA .container .ctas .button {
+    margin: unset;
   }
 }
 .Contact .container {
@@ -753,7 +825,7 @@ footer .copyright {
   color: #eee;
 }
 .Blogs .Hero .container .categories_wrapper .categories .category {
-  background: #222831;
+  background: #ffd001;
   border-radius: 32px;
   padding: 4px 12px;
 }

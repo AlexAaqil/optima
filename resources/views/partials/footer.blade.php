@@ -4,8 +4,8 @@
             <div class="image">
                 <x-app-logo />
             </div>
-            <p class="app_name">{{ env('APP_NAME') }}</p>
-            <p>Some cool slogan.</p>
+            <p class="app_name">{{ config('globals.app_name') }}</p>
+            <p>Optimal software driven solutions.</p>
         </section>
 
         <section class="links">
@@ -23,11 +23,11 @@
 
             <div class="socials">
                 <a href="https://wa.me/{{config('globals.whatsapp_number')}}">
-                    <img src="{{ asset('assets/images/whatsapp.png') }}" alt="{{ env('APP_NAME') }} Whatsapp">
+                    <img src="{{ asset('assets/images/whatsapp.png') }}" alt="{{ config('globals.app_name') }} Whatsapp">
                 </a>
 
                 <a href="#">
-                    <img src="{{ asset('assets/images/instagram.png') }}" alt="{{ env('APP_NAME') }} Instagram">
+                    <img src="{{ asset('assets/images/instagram.png') }}" alt="{{ config('globals.app_name') }} Instagram">
                 </a>
             </div>
         </section>

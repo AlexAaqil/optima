@@ -1,7 +1,7 @@
 <nav>
     <div class="brand">
         <a href="{{ route('home') }}">
-            <h1>{{ env('APP_NAME') }}</h1>
+            <h1>{{ config('globals.app_name') }}</h1>
         </a>
     </div>
 
@@ -15,11 +15,11 @@
             ];
         @endphp
 
-        @if(Auth::user() && Auth::user()->user_level == 1)
+        {{-- @if(Auth::user() && Auth::user()->user_level == 1)
             <a href="{{ route('dashboard') }}">Dashboard</a>
         @elseif(Auth::user() && Auth::user()->user_level == 0)
             <a href="{{ route('admin.dashboard') }}">Dashboard</a>
-        @endif
+        @endif --}}
 
         @foreach($nav_links as $nav_link)
             <a href="{{ $nav_link['route'] ? route($nav_link['route']) : '#' }}" class="nav_link {{ Route::currentRouteName() === $nav_link['route'] ? 'active' : '' }}">
@@ -28,7 +28,7 @@
         @endforeach
     </div>
 
-    <div class="nav_authentication">
+    {{-- <div class="nav_authentication">
         @if(Auth::user())
             <div class="actions">
                 <a href="{{ route('profile.edit') }}" class="profile">
@@ -44,7 +44,7 @@
         @else
             <a href="{{ route('login') }}" class="login_btn">Login</a>
         @endif
-    </div>
+    </div> --}}
 
     <div class="burger_menu">
         <div class="burger_icon" id="burgerIcon">

@@ -1,1 +1,1 @@
-<img src="{{ asset('assets/images/default_image.jpg') }}" alt="{{ env('APP_NAME') }} Logo">
+<img src="{{ asset('assets/images/optima-soft-logo.jpg') }}" alt="{{ env('APP_NAME') }} Logo">
